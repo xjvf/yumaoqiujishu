@@ -130,14 +130,14 @@ social:
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-#  Twitter: https://twitter.com/badmintontips || twitter
+  Twitter: https://twitter.com/badmintontips || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/badmintontips || instagram
+  Instagram: https://instagram.com/badmintontips || instagram
   #Skype: skype:yourname?call|chat || skype
-  #微博: https://weibo.com/badmintontips/ || weibo
+  微博: https://weibo.com/badmintontips/ || weibo
 
 social_icons:
   enable: true
@@ -237,15 +237,15 @@ post_wordcount:
   separated_meta: true
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /images/wc_qr.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+wechat_subscriber:
+  enabled: true
+  qcode: /images/wc_qr.jpg
+  description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: 支持原创，为我打电话！
-#  wechatpay: /images/wechatpay.jpg
-#  alipay: /images/alipay.jpg
+reward_comment: 支持原创，为我打电话！
+  wechatpay: /images/wechatpay.jpg
+  alipay: /images/alipay.jpg
 # bitcoin: /images/bitcoin.png
 
 # Declare license on posts
