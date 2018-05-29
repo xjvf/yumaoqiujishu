@@ -5,9 +5,9 @@
   <subtitle>技术没有专业和业余，只有业精于勤。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yumaoqiujishu.club/"/>
+  <link href="http://oh.money/"/>
   <updated>2018-05-28T23:51:39.891Z</updated>
-  <id>http://yumaoqiujishu.club/</id>
+  <id>http://oh.money/</id>
   
   <author>
     <name>弗洛缺德</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>test-now</title>
-    <link href="http://yumaoqiujishu.club/uncategorized/test-now/"/>
-    <id>http://yumaoqiujishu.club/uncategorized/test-now/</id>
+    <link href="http://oh.money/uncategorized/test-now/"/>
+    <id>http://oh.money/uncategorized/test-now/</id>
     <published>2018-05-28T23:47:36.000Z</published>
     <updated>2018-05-28T23:51:39.891Z</updated>
     
@@ -37,14 +37,14 @@
     </summary>
     
     
-      <category term="test now" scheme="http://yumaoqiujishu.club/tags/test-now/"/>
+      <category term="test now" scheme="http://oh.money/tags/test-now/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yumaoqiujishu.club/uncategorized/hello-world/"/>
-    <id>http://yumaoqiujishu.club/uncategorized/hello-world/</id>
+    <link href="http://oh.money/uncategorized/hello-world/"/>
+    <id>http://oh.money/uncategorized/hello-world/</id>
     <published>2018-05-28T22:43:28.378Z</published>
     <updated>2018-05-28T22:43:28.378Z</updated>
     
