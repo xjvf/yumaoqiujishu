@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="羽毛球,苹果电脑,homebrew,youtube,批量,比赛视频,下载," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="大众羽毛球技术" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="在视频网站回看精彩比赛的确给流量少的球友带来的很大的困扰，所以在电脑下载比赛看就成为首选。鉴于苹果电脑数量已经很大，相对使用也容易。下面介绍在苹果电脑上下载YouTube比赛视频的具体方法： 科学上网1安装homebrew 打开“终端”粘贴脚本：/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebre">
+<meta name="keywords" content="羽毛球,苹果电脑,homebrew,youtube,批量,比赛视频,下载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用苹果电脑批量下载YouTube比赛视频">
+<meta property="og:url" content="http://yumaoqiujishu.club/辅助工具/进阶技术/e5-a6-82-e4-bd-95-e7-94-a8-e8-8b-b9-e6-9e-9c-e7-94-b5-e8-84-91-e6-89-b9-e9-87-8f-e4-b8-8b-e8-bd-bdyoutube-e6-af-94-e8-b5-9b-e8-a7-86-e9-a2-91/index.html">
+<meta property="og:site_name" content="大众羽毛球技术">
+<meta property="og:description" content="在视频网站回看精彩比赛的确给流量少的球友带来的很大的困扰，所以在电脑下载比赛看就成为首选。鉴于苹果电脑数量已经很大，相对使用也容易。下面介绍在苹果电脑上下载YouTube比赛视频的具体方法： 科学上网1安装homebrew 打开“终端”粘贴脚本：/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebre">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://yumaoqiujishu.com/wp-content/uploads/2016/11/install-home-brew.jpeg">
+<meta property="og:image" content="https://yumaoqiujishu.com/wp-content/uploads/2016/11/install-youtube-dl.jpeg">
+<meta property="og:image" content="https://yumaoqiujishu.com/wp-content/uploads/2016/11/download-with-youtube-dl.jpeg">
+<meta property="og:updated_time" content="2018-05-29T11:45:16.179Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何用苹果电脑批量下载YouTube比赛视频">
+<meta name="twitter:description" content="在视频网站回看精彩比赛的确给流量少的球友带来的很大的困扰，所以在电脑下载比赛看就成为首选。鉴于苹果电脑数量已经很大，相对使用也容易。下面介绍在苹果电脑上下载YouTube比赛视频的具体方法： 科学上网1安装homebrew 打开“终端”粘贴脚本：/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebre">
+<meta name="twitter:image" content="https://yumaoqiujishu.com/wp-content/uploads/2016/11/install-home-brew.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yumaoqiujishu.club/辅助工具/进阶技术/e5-a6-82-e4-bd-95-e7-94-a8-e8-8b-b9-e6-9e-9c-e7-94-b5-e8-84-91-e6-89-b9-e9-87-8f-e4-b8-8b-e8-bd-bdyoutube-e6-af-94-e8-b5-9b-e8-a7-86-e9-a2-91/"/>
+
+
+
+
+
+  <title>如何用苹果电脑批量下载YouTube比赛视频 | 大众羽毛球技术</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大众羽毛球技术</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">技术没有专业和业余，只有业精于勤。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/atom.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yumaoqiujishu.club/辅助工具/进阶技术/e5-a6-82-e4-bd-95-e7-94-a8-e8-8b-b9-e6-9e-9c-e7-94-b5-e8-84-91-e6-89-b9-e9-87-8f-e4-b8-8b-e8-bd-bdyoutube-e6-af-94-e8-b5-9b-e8-a7-86-e9-a2-91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="弗洛缺德">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大众羽毛球技术">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何用苹果电脑批量下载YouTube比赛视频</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-12T10:09:38+08:00">
+                2016-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/辅助工具/" itemprop="url" rel="index">
+                    <span itemprop="name">辅助工具</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/辅助工具/进阶技术/" itemprop="url" rel="index">
+                    <span itemprop="name">进阶技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/辅助工具/进阶技术/e5-a6-82-e4-bd-95-e7-94-a8-e8-8b-b9-e6-9e-9c-e7-94-b5-e8-84-91-e6-89-b9-e9-87-8f-e4-b8-8b-e8-bd-bdyoutube-e6-af-94-e8-b5-9b-e8-a7-86-e9-a2-91/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/辅助工具/进阶技术/e5-a6-82-e4-bd-95-e7-94-a8-e8-8b-b9-e6-9e-9c-e7-94-b5-e8-84-91-e6-89-b9-e9-87-8f-e4-b8-8b-e8-bd-bdyoutube-e6-af-94-e8-b5-9b-e8-a7-86-e9-a2-91/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在视频网站回看精彩比赛的确给流量少的球友带来的很大的困扰，所以在电脑下载比赛看就成为首选。鉴于苹果电脑数量已经很大，相对使用也容易。下面介绍在苹果电脑上下载YouTube比赛视频的具体方法：</p>
+<h2 id="科学上网1安装homebrew"><a href="#科学上网1安装homebrew" class="headerlink" title="科学上网1安装homebrew"></a>科学上网<a href="#fn1">1</a>安装homebrew</h2><ol>
+<li>打开“终端”粘贴脚本：<code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”</code><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/11/install-home-brew.jpeg" alt="install-home-brew"></li>
+<li>脚本会解释它的作用，然后在您的确认下执行安装。高级安装选项（英文）请看 <a href="https://github.com/Homebrew/brew/blob/master/docs/Installation.md#installation" title="homebrew高级安装说明" target="_blank" rel="noopener">这里</a><a href="#fn2">2</a>。</li>
+</ol>
+<h2 id="使用homebrew安装youtube-dl"><a href="#使用homebrew安装youtube-dl" class="headerlink" title="使用homebrew安装youtube-dl"></a>使用<strong>homebrew</strong>安装<strong>youtube-dl</strong></h2><ol>
+<li>在已经成功安装<strong>homebrew</strong>的终端里，输入<code>brew install youtube-dl</code><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/11/install-youtube-dl.jpeg" alt="install-youtube-dl"></li>
+<li>安装好<em>youtube-dl</em>后即可使用<em>youtube-dl</em>命令下载视频（支持批量下载），比如你要下载最新的德国公开赛视频，则可以使用如下命令<a href="#fn3">3</a>：<code>youtube-dl https://www.youtube.com/playlist?list=PLA7ZcagI0frD6kWiFlcZGBCCRq5vC\_2\_H</code><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/11/download-with-youtube-dl.jpeg" alt="download-with-youtube-dl"></li>
+<li>可以点赞了。</li>
+</ol>
+<p>_　　注意一下只要是youtube-dl这个脚本支持的平台，比如Linux/Unix甚至Windows下都可以使用，并不局限于苹果，只不过苹果的环境稍微简单一些不容易出现问题。_</p>
+<ol>
+<li>这个问题鉴于篇幅不做过多介绍，在百度里搜“科学上网”就会得到正确答案。 <a href="#ffn1">↩︎</a></li>
+<li>需要10.5及以上系统版本 <a href="#ffn2">↩︎</a></li>
+<li>youtube-dl后跟一个半角空格再接上视频或视频列表的地址 <a href="#ffn3">↩︎</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wc_qr.jpg" alt="弗洛缺德 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>据说关注这个公众号的人都涨球了。</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="弗洛缺德 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="弗洛缺德 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    弗洛缺德
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="452.html" title="如何用苹果电脑批量下载YouTube比赛视频">452.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/羽毛球/" rel="tag"># 羽毛球</a>
+          
+            <a href="/tags/苹果电脑/" rel="tag"># 苹果电脑</a>
+          
+            <a href="/tags/homebrew/" rel="tag"># homebrew</a>
+          
+            <a href="/tags/youtube/" rel="tag"># youtube</a>
+          
+            <a href="/tags/批量/" rel="tag"># 批量</a>
+          
+            <a href="/tags/比赛视频/" rel="tag"># 比赛视频</a>
+          
+            <a href="/tags/下载/" rel="tag"># 下载</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/辅助工具/e7-be-bd-e6-af-9b-e7-90-83-e8-a3-81-e5-88-a4-e5-bf-85-e5-a4-87-e7-9a-84-e4-b8-80-e4-ba-9b-e6-89-8b-e6-9c-ba-e5-b9-b3-e6-9d-bf-e8-bd-af-e4-bb-b6-e6-8e-a8-e8-8d-90/" rel="next" title="羽毛球裁判必备的一些手机平板软件推荐">
+                <i class="fa fa-chevron-left"></i> 羽毛球裁判必备的一些手机平板软件推荐
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/进阶技术/advance-skill-dropshot/" rel="prev" title="羽毛球进阶技术：吊球">
+                羽毛球进阶技术：吊球 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="弗洛缺德" />
+            
+              <p class="site-author-name" itemprop="name">弗洛缺德</p>
+              <p class="site-description motion-element" itemprop="description">封网 ≠ 挂在网上；直接未必有折线快；位置是相对于球，不是场地；含而不发是用力的最高境界。适合我们自己的，才是最好的技术……</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">199</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xjvf" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/+younzeryue" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/badmintontips" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/badmintonqna" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://instagram.com/badmintontips" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/badmintontips/" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#科学上网1安装homebrew"><span class="nav-number">1.</span> <span class="nav-text">科学上网1安装homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用homebrew安装youtube-dl"><span class="nav-number">2.</span> <span class="nav-text">使用homebrew安装youtube-dl</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">弗洛缺德</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'DspDTyBGcFoTiKPAusMoAXJS-gzGzoHsz',
+        appKey: 'w9TdbhQeXRE2OHlz1qgs7lRy',
+        placeholder: '没病走两步？',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
