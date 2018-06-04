@@ -229,13 +229,9 @@
     
       <category term="视频" scheme="http://yumaoqiujishu.club/tags/%E8%A7%86%E9%A2%91/"/>
     
-      <category term="羽毛球" scheme="http://yumaoqiujishu.club/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"/>
-    
       <category term="进阶技术" scheme="http://yumaoqiujishu.club/tags/%E8%BF%9B%E9%98%B6%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="推荐" scheme="http://yumaoqiujishu.club/tags/%E6%8E%A8%E8%8D%90/"/>
-    
-      <category term="双打" scheme="http://yumaoqiujishu.club/tags/%E5%8F%8C%E6%89%93/"/>
+      <category term="羽毛球" scheme="http://yumaoqiujishu.club/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"/>
     
       <category term="训练" scheme="http://yumaoqiujishu.club/tags/%E8%AE%AD%E7%BB%83/"/>
     
@@ -243,7 +239,11 @@
     
       <category term="轮转" scheme="http://yumaoqiujishu.club/tags/%E8%BD%AE%E8%BD%AC/"/>
     
+      <category term="双打" scheme="http://yumaoqiujishu.club/tags/%E5%8F%8C%E6%89%93/"/>
+    
       <category term="多球" scheme="http://yumaoqiujishu.club/tags/%E5%A4%9A%E7%90%83/"/>
+    
+      <category term="推荐" scheme="http://yumaoqiujishu.club/tags/%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
@@ -659,13 +659,13 @@
     
       <category term="羽毛球" scheme="http://yumaoqiujishu.club/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"/>
     
-      <category term="推荐" scheme="http://yumaoqiujishu.club/tags/%E6%8E%A8%E8%8D%90/"/>
-    
-      <category term="双打" scheme="http://yumaoqiujishu.club/tags/%E5%8F%8C%E6%89%93/"/>
-    
       <category term="跑位" scheme="http://yumaoqiujishu.club/tags/%E8%B7%91%E4%BD%8D/"/>
     
       <category term="轮转" scheme="http://yumaoqiujishu.club/tags/%E8%BD%AE%E8%BD%AC/"/>
+    
+      <category term="双打" scheme="http://yumaoqiujishu.club/tags/%E5%8F%8C%E6%89%93/"/>
+    
+      <category term="推荐" scheme="http://yumaoqiujishu.club/tags/%E6%8E%A8%E8%8D%90/"/>
     
       <category term="抢球" scheme="http://yumaoqiujishu.club/tags/%E6%8A%A2%E7%90%83/"/>
     
