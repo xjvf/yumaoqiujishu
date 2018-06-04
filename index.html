@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,10 +22,6 @@
 <meta name="theme-color" content="#222">
 
 
-
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
 
 
@@ -53,10 +49,6 @@
 
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -92,20 +84,20 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    fastclick: ,
-    lazyload: ,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "没病走两步？",
-      labels: {"input_placeholder":"搜索你感兴趣的文章","hits_empty":"没发现和 ${query} 有关的内容","hits_stats":"${hits} results found in ${time} ms"}
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -235,88 +227,28 @@
         
           
           <li class="menu-item menu-item-home menu-item-active">
-    <a href="/" rel="section">Home</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">About</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">Categories</a>
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">Archives</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-    <a href="/atom.xml" rel="section">Sitemap</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
-    <a href="/404/" rel="section">Commonweal 404</a>
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
       
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            Search</a>
-        </li>
       
     </ul>
   
 
   
+    
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
 
-
-
-    </div>
   
 </nav>
 
@@ -335,9 +267,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
           
           <div id="content" class="content">
             
@@ -404,9 +333,13 @@
                 
               
 
-              <time title="Created: 2018-05-31 02:28:48" itemprop="dateCreated datePublished" datetime="2018-05-31T02:28:48+08:00">2018-05-31</time>
+              <time title="Created: 2018-05-31 02:28:48 / Modified: 03:26:42" itemprop="dateCreated datePublished" datetime="2018-05-31T02:28:48+08:00">2018-05-31</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -431,16 +364,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/进阶技术/站着说话不腰疼：这些能力可不是看看公众号就具备的/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/进阶技术/站着说话不腰疼：这些能力可不是看看公众号就具备的/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -468,19 +391,30 @@
       
         
           
-          前两天某公众号上发布了一篇文章，大意就是具备那几种能力就可以当仁不让的成为业余羽毛球双打爱好者中的大腿。话谁都会说，可是屁股总要有人来擦，下面我就尝试着擦一擦该文章的屁股。全文只有一句话是非常正确的——“必须要具备一项或几项高于对手的能力”。人非机器，能力必有差距，要在场上达到扬长避短，需要的是意识和套路。
+            <p>前两天某公众号上发布了一篇文章，大意就是具备那几种能力就可以当仁不让的成为业余羽毛球双打爱好者中的大腿。<br>话谁都会说，可是屁股总要有人来擦，下面我就尝试着擦一擦该文章的屁股。<br>全文只有一句话是非常正确的——“必须要具备一项或几项高于对手的能力”。人非机器，能力必有差距，要在场上达到扬长避短，需要的是意识和套路。</p>
+<blockquote>
+<p>清醒的头脑和不抛弃不放弃的态度才是最重要的。</p>
+</blockquote>
+<h1 id="哪些才是能力？"><a href="#哪些才是能力？" class="headerlink" title="哪些才是能力？"></a>哪些才是能力？</h1><p>是发接发、封网、平抽相持、后场进攻、防守、分球和轮转这几样吗？<br>NO<br>这几个只是对抗中的环节，什么才是能力？能力是一些基础素质——速度（绝对和相对）、力量（绝对力量和爆发力）、灵敏（反应）、柔韧（步长）和耐力（持久），是单位时间内处理球的效率。</p>
+<h1 id="能力如何影响以上几个环节？"><a href="#能力如何影响以上几个环节？" class="headerlink" title="能力如何影响以上几个环节？"></a>能力如何影响以上几个环节？</h1><p>下面逐一破解：</p>
+<h2 id="基础能力对双打环节的影响"><a href="#基础能力对双打环节的影响" class="headerlink" title="基础能力对双打环节的影响"></a>基础能力对双打环节的影响</h2><p>基础能力如何影响发接发、封网、平抽相持、后场进攻、防守、分球和轮转？</p>
+<h3 id="发接发"><a href="#发接发" class="headerlink" title="发接发"></a>发接发</h3><p><strong>速度</strong>主要影响接发球，表现在脚下的移动速度，决定接发人能否在球过身体平面之前移动到合适的位置并有效触球。尤其接后场球，速度快的人可以杀，移动慢意味着失去重心，就只能回后场高远球了——强杀和强调都不可取。<br>对于前场球，<strong>灵敏度</strong>起决定作用，在极短的时间内，快速的思考和反应是将球回向最佳落点、占据主动是需要优先考虑的。</p>
+<h3 id="封网"><a href="#封网" class="headerlink" title="封网"></a>封网</h3><p>速度和灵敏起决定性作用。</p>
+<h3 id="平抽"><a href="#平抽" class="headerlink" title="平抽"></a>平抽</h3><p>受由侧身举拍、脚下移动取位、针对来球迅速反应等灵敏度制约，同时抽球质量取决于拍面接近球拖时的瞬间爆发力。</p>
+<h3 id="后场进攻"><a href="#后场进攻" class="headerlink" title="后场进攻"></a>后场进攻</h3><p>受移动速度、爆发力（协调发力）和耐力（连续进攻）共同制约。<br>移动速度慢在身前杀球，只能打过度或形成相持；发力不协调会导致杀球不快、吊球不尖；无法连续进攻就只能轮转或转防守，并且在转换过程中出错机率增加。</p>
+<h3 id="防守"><a href="#防守" class="headerlink" title="防守"></a>防守</h3><p>受爆发力和灵敏度影响，取位不佳、球拍被压向身体、对方杀球太快没反应，都会直接影响防守或转进攻的质量。</p>
+<h3 id="分球"><a href="#分球" class="headerlink" title="分球"></a>分球</h3><p>主要受灵敏度影响，同时也要兼顾爆发力和耐力——能否坚持到分球是个问题。</p>
+<h3 id="轮转"><a href="#轮转" class="headerlink" title="轮转"></a>轮转</h3><p>在非常短的时间内挡网跟进、或退出前场主要受速度和灵敏度影响。脚下步法过慢，以及捕捉时机后不能马上换位会形成轮转不流畅，容易被打空档形成斜线摆脱和大对角穿越。<br>绝对力量和柔韧性，间接影响其它能力，相对弱一些的人会先疲劳达到极点，不利于各个环节的发挥。</p>
+<h1 id="如何提高基础能力"><a href="#如何提高基础能力" class="headerlink" title="如何提高基础能力"></a>如何提高基础能力</h1><p>在这一点上，没有太多要讲，就是日复一日的训练。</p>
+<h2 id="基础素质和专项练习是必须的"><a href="#基础素质和专项练习是必须的" class="headerlink" title="基础素质和专项练习是必须的"></a>基础素质和专项练习是必须的</h2><p>这些练习方法太多了，多看国外层出不穷的新花样，真的不要固步自封。个人感觉在训练手段上，我国已经大幅落后了。先承认，再提高，面子不是问题，不要有门户之见，赢球自然就有面子。</p>
+<h1 id="有了能力还不算完"><a href="#有了能力还不算完" class="headerlink" title="有了能力还不算完"></a>有了能力还不算完</h1><p>按理来说，水龙的能力算是很强了，杀上网挑球得炉火纯青。但是为什么打不过桃田？主要在于意识和拼搏精神。双塔的能力也很强，为什么总是打不过小黄人，其一是打法克制，其二是场上思考效率。</p>
+<h2 id="提高意识补差"><a href="#提高意识补差" class="headerlink" title="提高意识补差"></a>提高意识补差</h2><p>意识流打法并不是每个人都能打出来，但确定可以利用一些冥想和教学手段培养。<br>通过对现有战术体系的研究，结合自身能力优缺点，想办法搞清楚哪些点是对方想利用的，如何有效的通过合理球路去规避，从而在场上限制对手。<br>如果没有好的意识，即使不画地为牢作茧自缚，也会被对手牢牢的精神锁定。</p>
+<h2 id="多与搭档沟通可以提高整体意识"><a href="#多与搭档沟通可以提高整体意识" class="headerlink" title="多与搭档沟通可以提高整体意识"></a>多与搭档沟通可以提高整体意识</h2><p>一个巴掌拍不响，两个巴掌啪啪啪。互补型的搭档最妙不可言——像黄人、李柳、哼山、钻石、风云，增幅型的搭档也有各自妙用，双塔百搭。<br>蔡队的感动来自于低头后面必有人，双塔好在可以轮流杀。所以互补型在于一个策划一个执行，增幅型在于有效轮转不停进攻。</p>
+<h2 id="利用各环节的针对性训练提高整体能力和意识"><a href="#利用各环节的针对性训练提高整体能力和意识" class="headerlink" title="利用各环节的针对性训练提高整体能力和意识"></a>利用各环节的针对性训练提高整体能力和意识</h2><p>在日常发接发、封网、平抽相持、后场进攻、防守、分球和轮转的训练中，发现搭档的优缺点去做球、补位，利用对方的缺点进行压制和进攻是千古话题。</p>
+<h2 id="多复盘总结"><a href="#多复盘总结" class="headerlink" title="多复盘总结"></a>多复盘总结</h2><p>看录像，找到每次对战时暴露出的问题有针对性的合理训练。每次解决一点，水滴石穿，总有一会搭档间的配合会达到天衣无缝的境界。</p>
+<h2 id="拼搏精神"><a href="#拼搏精神" class="headerlink" title="拼搏精神"></a>拼搏精神</h2><p>这一点韩国队做的特别好，顽强，不放弃每一板。</p>
 
-清醒的头脑和不抛弃不放弃的态度才是最重要的。
-
-哪些才是能力？是发接发、封网、平抽相持、
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/进阶技术/站着说话不腰疼：这些能力可不是看看公众号就具备的/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -582,21 +516,27 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 20:22:19" itemprop="dateModified" datetime="2018-05-30T20:22:19+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/uncategorized/0-2/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/uncategorized/0-2/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -624,25 +564,18 @@
       
         
           
-          5：21了解一下 
-
-仁川亚运永在人心，这不是第一次了…常规操作，坐下喝口水吧 
-熟悉的一哥熟悉的团体赛熟悉的赛后采访！一哥稳！从来不带来任何意外！
-\
-别跟我说你行你上，我上我也0:2。
-还能和桃田握手，和林丹队友。我上吧。
-到于吐槽，真的是太多了，去蔡队微博上慢慢翻吧……
-
-最后被洒一波狗粮。这篇还是测试，说不定啥时候就删了。
--->
+            <blockquote class="blockquote-center"><p>5：21了解一下 </p>
+</blockquote>
+<div class="note warning"><p>仁川亚运永在人心，这不是第一次了…常规操作，坐下喝口水吧 </p></div>
+<div class="note danger"><p>熟悉的一哥熟悉的团体赛熟悉的赛后采访！一哥稳！从来不带来任何意外！</p></div>
+<p>\<!-- more --\>
+<div class="note success"><p>别跟我说你行你上，我上我也0:2。</p></div>
+<div class="note primary"><p>还能和桃田握手，和林丹队友。我上吧。</p></div></p>
+<p>到于吐槽，真的是太多了，去<a href="https://weibo.com/1234682582/GiAJdBAtt">蔡队微博</a>上慢慢翻吧……</p>
+<p><img src="https://ww4.sinaimg.cn/bmiddle/7875397fly1frq4jtofsvj20qc0igmz6.jpg" alt="" title="林丹谢杏芳秀恩爱"></p>
+<p>最后被洒一波狗粮。这篇还是<em>测试</em>，说不定啥时候就<strong>删了</strong>。</p>
+--></p>
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/uncategorized/0-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -744,6 +677,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 13:37:51" itemprop="dateModified" datetime="2018-05-30T13:37:51+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -767,16 +716,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/backhand-time/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/backhand-time/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -804,16 +743,9 @@
       
         
           
-          是时候来波儿反手了 — Read on mp.weixin.qq.com/s/-AmfSwuU9ooDVARpbCQKTQ
+            <p>是时候来波儿反手了 — Read on <a href="https://mp.weixin.qq.com/s/-AmfSwuU9ooDVARpbCQKTQ" target="_blank" rel="noopener">mp.weixin.qq.com/s/-AmfSwuU9ooDVARpbCQKTQ</a></p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/backhand-time/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -915,6 +847,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 20:22:53" itemprop="dateModified" datetime="2018-05-30T20:22:53+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -938,16 +886,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/diss-from-the-north/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/diss-from-the-north/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -975,15 +913,9 @@
       
         
           
-          埋汰就是 diss，不过跟东北人这么说可要小心别挨揍。练好身体的同时，学习一下先进的硬嗑儿。\&lt;!– more –> 发个球捂捂轩轩（浮夸）、捂捂扎扎（夸张、吓唬人）、吭哧瘪肚（老费劲了）、磨磨唧唧（磨磨蹭蹭、拖拖拉拉）、陌陌张机（效率低）；唠个嗑三槌六哨（不真实，吹NB）、急了拐弯（绕弯子、含蓄）、费劲巴拉（不痛快）；买个鞋的了八嗖（得得瑟瑟），出个球毛愣三光（急躁毛躁），跑个位突漏反仗（
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/diss-from-the-north/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>埋汰就是 diss，不过跟东北人这么说可要小心别挨揍。练好身体的同时，学习一下先进的硬嗑儿。<br>\&lt;!– more –><br> 发个球捂捂轩轩（浮夸）、捂捂扎扎（夸张、吓唬人）、吭哧瘪肚（老费劲了）、磨磨唧唧（磨磨蹭蹭、拖拖拉拉）、陌陌张机（效率低）；<br>唠个嗑三槌六哨（不真实，吹NB）、急了拐弯（绕弯子、含蓄）、费劲巴拉（不痛快）；<br>买个鞋的了八嗖（得得瑟瑟），出个球毛愣三光（急躁毛躁），跑个位突漏反仗（没有条理），丢个分激头掰脸（急躁易怒），回个球直吧愣腾（一根筋）；<br>热个身五马长枪（装腔作势），跑个步暴土扬长（尘土飞扬）；<br>把搭档和对手整的闹心巴拉（心情奇差），打完球一脸汗魂儿画儿（乱）滴、头发支楞八翘（凌乱）滴，埋了咕胎（脏）、滴流算挂（邋遢）；<br>在场上五迷三道（神志不清、浑浑噩噩）、扬了二正（不过脑子）、西了马哈（马马虎虎、漫不经心、心不在焉），诶妈呀，救个球波（3声）楞盖儿害（还）卡秃露皮了；<br>争出界唧唧歪歪（抱怨、挑剔、小肚鸡肠）、超超八火儿（吵、喊、大声说话）、破马张飞（歇斯底里、乱七八糟），回家装备扔的皮（1声）儿片儿（凌乱）滴，打完球聚餐造/呛（吃）的呼喽半片（干活不细致不仔细、吃东西狼吞虎咽）；<br>看人家杀球皮了啪啦、出球骑彻咔嚓（痛快、利索、麻利、干练）、执行战术嘎巴流丢脆（同骑彻咔嚓），sei（谁）不歇罕（喜欢）；<br>再看你磕了八碜（丑）、本（2声）儿露瓦块（额头高）；<br>冬天冻的嘶嘶哈哈（冷的的的瑟瑟，瑟瑟发抖）、鼻挺（4声）拉虾（鼻涕当啷着的那种脏，当啷就是挂着的意思）；夏天穿的水裆尿裤（衣衫不整）。<br>你尬哈（干啥），拥护（因为）啥？跟 sei 俩？ 滚犊子（走开、拉到）！ </p>
+
+          
         
       
     </div>
@@ -1085,6 +1017,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:36:43" itemprop="dateModified" datetime="2018-05-30T14:36:43+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1108,16 +1056,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/新闻/lindan-no-retirement/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/新闻/lindan-no-retirement/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1145,15 +1083,9 @@
       
         
           
-          T 恤不能白做！北京时间10月12日上午，林丹在北京什刹海体校召开的第十三届全运会北京体育代表团总结大会现场接受采访时表示暂无退役想法，明年还想争取第 20 个世界冠军。  生于 1983 年的林丹今年已满 34 周岁，与林宗伟同为传奇羽毛球运动员。  自 2002 年 8 月荣登 BWF 男单排名第一的位置后 15 年过去了，他是羽毛球历上第一位集奥会冠军、世锦赛冠军、世界杯冠军、亚运会冠军、亚
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/新闻/lindan-no-retirement/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>T 恤不能白做！北京时间10月12日上午，林丹在北京什刹海体校召开的第十三届全运会北京体育代表团总结大会现场接受采访时表示暂无退役想法，明年还想争取第 20 个世界冠军。 <img src="https://yumaoqiujishu.com/wp-content/uploads/2017/07/7aef886670056051d69a167b34843553.jpg" alt="7aef886670056051d69a167b34843553"> 生于 1983 年的林丹今年已满 34 周岁，与林宗伟同为传奇羽毛球运动员。 <img src="https://yumaoqiujishu.com/wp-content/uploads/2017/06/lin-dan-ol.jpg" alt="lin-dan-ol"> 自 2002 年 8 月荣登 BWF 男单排名第一的位置后 15 年过去了，他是羽毛球历上第一位集奥会冠军、世锦赛冠军、世界杯冠军、亚运会冠军、亚锦赛冠军、全英赛冠军等多个世界羽联超级系列赛冠军于一身的全满贯球员。 <img src="https://yumaoqiujishu.com/wp-content/uploads/2017/07/04.gif" alt="04"> 2005 年，苏杯决赛林丹战胜奥运冠军陶菲克， 2008 年北京奥运会男单冠军，2012 年伦敦奥运会卫冕目前无出其右，2014 年仁川亚运会男单打冠军，2016 年第六次获得全英男单冠军，2017 年马来西亚公开赛男单冠军…… 林丹的标志性动作包括赛中的鱼跃救球、神龙摆尾、超薄滑板和跳杀，赛后行军礼，不过转业定居北京后改变了庆祝动作。 <img src="https://yumaoqiujishu.com/wp-content/uploads/2017/06/0022190dec45124363c028.jpg" alt="0022190dec45124363c028"> 林丹多次在公开采访中都坦言目前身心状态都非常好，对于 2018 年在家门的汤杯及世锦赛，有让世界冠军达到 20 个甚至更多的机会就一定要争取。 从年轻时令人闻风丧胆的突击跳杀到现在让没招没落的太极球，除了冠军林丹还有更高的追求——以更长的职业生涯展现顽强拼搏精神，更好的推广羽毛球让大众爱好者更多的接受并参与其中。 林丹给年轻人的建议是世界冠军只是开始，更重要的是持续的努力下去，而不是混个功名之后草草结束职业生涯。 我龙，你也要加油啊！</p>
+
+          
         
       
     </div>
@@ -1255,6 +1187,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 20:27:52" itemprop="dateModified" datetime="2018-05-30T20:27:52+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1278,16 +1226,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/doubles-training-with-partner/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/doubles-training-with-partner/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1315,15 +1253,9 @@
       
         
           
-          双打相关的技术略少，会比单打更好练，但套路更多又需要两个人配合，所以想练好就困难一些。 能有个对球的执着程度、领悟、技术水平和业余时间相当的固定搭档很难，又能经常在一起花时间训练的就更是难上加难。 有些朋友单打好一点但双打很水，不用自暴自弃——那是因为跟搭档的磨合太少。 很多朋友打完一局球，会发现搭档满脸黑线——双打除了节奏、连贯合拍，什么时候该上、什么时候要让也很重要，虽然在文章《前后场抢球打破
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/doubles-training-with-partner/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>双打相关的技术略少，会比单打更好练，但套路更多又需要两个人配合，所以想练好就困难一些。 能有个对球的执着程度、领悟、技术水平和业余时间相当的固定搭档很难，又能经常在一起花时间训练的就更是难上加难。 有些朋友单打好一点但双打很水，不用自暴自弃——那是因为跟搭档的磨合太少。<br> <img src="https://yumaoqiujishu.com/wp-content/uploads/2017/10/copypasteimage-1.jpg" alt=""><br>很多朋友打完一局球，会发现搭档满脸黑线——双打除了节奏、连贯合拍，什么时候该上、什么时候要让也很重要，虽然在文章《<a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484152&amp;idx=1&amp;sn=9e86999e2e36fb7ab8137cb515799dad&amp;chksm=ebdb331fdcacba09229d35ac0d105eba26920c2e22c7e9e53db9326cf662e919d0838c3c5147&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">前后场抢球打破头到底是谁的锅</a>》里提到了一些原则，但当时没有具体的操作方法。 然而就在今天，解决方案来了！ 请看下面视频： <a href="http://m.v.qq.com/play/play.html?vid=b0552ev79mf&amp;type=4&amp;ptag=4_5.8.2.20367_copy" target="_blank" rel="noopener">双打轮转多球练习</a> 在关门，放搭档之前，重申一下个人对轮转的原则的理解： <strong>1、来球，让接球更主动的人接。</strong> 说起来容易做起来难。以经典发接发推扑为例，接发队员推扑后，球被质量很好的反推中腰或底线，需要后场搭档有意识的去截击。 难点在于后场搭档是否有能力和自信在站中场位置，若站位偏向一侧，则被推另一侧底线基本无解； <strong>2、后场默认杀上网，前场默认去封网。</strong> 看似矛盾，实则相反。若教条的约定后杀前封，后杀过于接近角落时被反抽斜线机率很大，此时如果前场搭档没有中场斜线位协防意识，后场再去另一个点出主动球的机会渺茫。 另外，中半场杀球后上网非常方便；但对于前场而言有可能是过头或身侧球不利于继续下压。 比如实用的方案是后场杀球后小垫步保留上网趋势并适当减速。若有前封，继续后攻；前场撤出，上网连贯。这样做的好处是——你杀累了我登场、我杀累了再上网； <strong>3、正确认知搭档能力和习惯。</strong> 每一个搭档都有长处，找到并挖掘你会发现世界可以更美好，而<strong>换搭档的成本实在太高</strong>。 <strong>4、正确判断场上主、被动形势。</strong> 对方失位、进攻质量差、习惯球路被预判，我方发现空档、挡网质量好、平高顶到位等主动球，直接前后位保持进攻。 极端例子：对方跳了我方挖的坑——打了搭档或自己看的点，一般会被反击；打到搭档的擅长手——比如某个群主的反手比正手好得多，然后被顶了反手正中下怀。 这个时候一般就不用犹豫，直接做<strong>上网趋势（而不用直接扑上去），敌不动我先动是要吃大亏滴</strong>。 BUT，要按上面视频来练，需要满足几个条件： <strong>1、</strong>要有一个发球非常好的伙伴或教练。 球的速度、高度、落点、节奏都要有针对性，后场、网前、中腰、平高、挡网、抽球都要能模拟，越接近实战、速度也要随着搭档默契程度的提高逐渐增加； <strong>2、</strong>要有一个技战术水平和对羽毛球认知水平相当的小伙伴； <strong>3、</strong>要有足够的钱和时间。 今天就先到这儿，欢迎提供素材或线索，感谢上上上期提意见的 <strong>Chris</strong>，腾讯视频或今日头条直接搜索“大众羽毛球技术”，听说订阅视频的朋友都涨球了。</p>
+
+          
         
       
     </div>
@@ -1425,6 +1357,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:54:43" itemprop="dateModified" datetime="2018-05-30T14:54:43+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1448,16 +1396,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/装备/racquet-pen/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/装备/racquet-pen/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1485,15 +1423,9 @@
       
         
           
-          念念不忘必有回响。自从看了中羽上拿中杆做圆珠笔的帖子，就一直心心念念的要付诸实践一下，可惜没有合适的机会（断中杆），直接锯又舍不得。可是就在今天！到球馆刚把包放下，就发现旁边的茶几上静静的躺着一物分两断：一支 JP 版的 YONEX 弓箭 11 赫然入目，旁边我的鞋证明不是盗图。我的天那！ 跟大狼确认，果然是隔壁群打完丢掉的。仔细观摩，中杆确有严重碰撞痕迹，通过钢号、菊花和原配底胶判断应该是正品。
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/装备/racquet-pen/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>念念不忘必有回响。自从看了中羽上拿中杆做圆珠笔的帖子，就一直心心念念的要付诸实践一下，可惜没有合适的机会（断中杆），直接锯又舍不得。<br><img src="https://yumaoqiujishu.com/wp-content/uploads/2017/07/tim-cook-happy.gif" alt="tim-cook-happy"><br>可是就在今天！到球馆刚把包放下，就发现旁边的茶几上静静的躺着一物分两断：一支 JP 版的 YONEX 弓箭 11 赫然入目，旁边我的鞋证明不是盗图。<br><img src="https://yumaoqiujishu.com/wp-content/uploads/2017/09/WechatIMG2072.jpeg" alt="WechatIMG2072"><br>我的天那！ 跟大狼确认，果然是隔壁群打完丢掉的。仔细观摩，中杆确有严重碰撞痕迹，通过钢号、菊花和原配底胶判断应该是正品。<br><img src="https://yumaoqiujishu.com/wp-content/uploads/2017/09/WechatIMG2073.jpeg" alt="WechatIMG2073"><br>一种去朋友生日宴会去吃得稀里哗啦喧宾夺主的感觉油然而生，一瞬间不知道该怎么办——当然是先发朋友圈！<br>BUT，上帝给我打开一扇门，顺手就会关个窗。回家的时候买错了地铁票，下了地铁发现附近 OFO 和摩拜的单车都没办法开启，再往边上瞟整整齐齐的停了 20 来辆黑摩的。<br>附近扒活儿的大哥们看着我，眼睛都绿了，哈喇子淌了一地。<br><img src="https://yumaoqiujishu.com/wp-content/uploads/2017/09/WechatIMG2078.jpeg" alt="WechatIMG2078"><br>哥是他们永远得不到的男人！<br><img src="https://yumaoqiujishu.com/wp-content/uploads/2017/06/05ebdb72e44152d9c5bb07d96a1030aa.jpg" alt="05ebdb72e44152d9c5bb07d96a1030aa"><br>虽然你可能看过了，但那毕竟是别人的对不对？ 还缺少圆珠笔芯、钢锯（条）、封口等小零碎，欢迎捐助。<br>1000 块的圆珠笔，有你的一半，也有我的一半，么么哒。</p>
+
+          
         
       
     </div>
@@ -1595,6 +1527,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:00:51" itemprop="dateModified" datetime="2018-05-30T14:00:51+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1618,16 +1566,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/badminton-words-zh-cn-en/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/badminton-words-zh-cn-en/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1655,16 +1593,14 @@
       
         
           
-          根据网络资料重新整理、修正和补充而成。 badminton 羽毛球（运动）
-球与球拍racket/bat 球拍 racket head 拍头，包括拍框和拍面face of racket/racket face 拍面（拍弦面）frame of racket 拍框handle of racket 拍柄shaft 拍杆throat 拍颈（连接喉）shuttle/shuttlecock 羽毛球feathe
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/badminton-words-zh-cn-en/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>根据网络资料重新整理、修正和补充而成。 badminton 羽毛球（运动）</p>
+<h1 id="球与球拍"><a href="#球与球拍" class="headerlink" title="球与球拍"></a>球与球拍</h1><p>racket/bat 球拍 racket head 拍头，包括拍框和拍面<br>face of racket/racket face 拍面（拍弦面）<br>frame of racket 拍框<br>handle of racket 拍柄<br>shaft 拍杆<br>throat 拍颈（连接喉）<br>shuttle/shuttlecock 羽毛球<br>feather 羽毛<br>cock base 球托（羽毛球的软木部分）<br>crown of feathers 羽毛圈（羽毛球的羽毛部分）<br>broken shuttle 坏球 plastic shuttle 塑料羽毛球</p>
+<h1 id="场地用语"><a href="#场地用语" class="headerlink" title="场地用语"></a>场地用语</h1><p><em>1、关于场区</em><br>court 球场<br>combination court 单打、双打合用的球场<br>doubles court 双打球场<br>singles court 单打球场<br>backcourt 后场<br>backcourt player 后场球员<br>forecourt 前场<br>forecourt player 前场球员<br>singles service court 单打发球区<br>doubles service court 双打发球区<br>service court 发球区<br>left court 左场区<br>left service court 左发球区<br>right court 右场区<br>right service court 右发球区<br>alley 单打与双打之间的场区<br>back alley 单打端线和双打端线之间的细长地带<br> <em>2、关于场地线条</em><br>back boundary line/backcourt boundary 端线（单打后发球线）<br>base line 端线<br>centre line/mid court line 中线<br>side line/side boundary line 边线<br>inside side line （单双打线都有的场地）单打边线<br>outside side line （单双打线都有的场地）双打边线<br>corners of backcourt 后场两角<br>doubles service line 双打发球线<br>front service line/short service line 前发球线<br>rear service line/long service line (双打)后发球线<br>rear court 后场<br>net post 网柱<br>net tape/white tape/band网顶白布条</p>
+<h1 id="击球技术"><a href="#击球技术" class="headerlink" title="击球技术"></a>击球技术</h1><p><em>1、关于握拍</em><br>forehand 正拍<br>backhand 反拍<br>grip 握拍<br>backhand grip 反手握拍<br>forehand grip 正手握拍<br><em>2、关于击球动作与球路</em><br>backswing 引拍（准备击球）<br>deception 假动作<br>preliminary feint （发球时的）假动作<br>delivery of service 发球动作<br>full strike 全力击球<br>full swing 全力挥拍<br>high backhand stroke 上手反拍击球<br>overhand stroke 上手球（高于手部的击球）<br>overhead stroke 头顶球（位于头顶的击球）<br>round-the-head stroke 绕头顶击球<br>shoulder-high drive 与肩齐高的平抽球<br>side-arm stroke 侧手球（回击位于身体侧面的球）<br>underhand stroke 下手球<br>strike 击（球）<br>intercept 截击<br>cut 切球<br>smash 杀球<br>forehand smash 正手杀球<br>backhand smash 反手杀球<br>around the head smash 过顶杀球<br>consecutive kill 连续扣杀<br>drive 平抽球<br>return 回球<br>retrieve 救球<br>rushing ①冲上网 ②扑球<br>sliding step 滑步<br>footwork 步法<br>drop shot 吊球<br>net play 网前击球（技术）<br>net shot网前放小球、网前搓球<br>net Kill 网前扑球<br>net lift 网前挑球（推后场）<br>clear 平高球<br>high clear 高远球<br>cross-court 斜线球<br>deep shot 深球（打到对方底线附近的球）<br>drive 平抽球<br>driven clear 平抽高球<br>drop shot 吊网前球<br>lift 近网挑球<br>hairpin shot “夹发针”球（在网前贴近地面的轻挑短球）<br>low shot 低平球<br>straight 直线球<br>descent （球）下降<br>flight （球）飞行<br><em>3、关于发接发</em><br>high serve 发高球 deep high service/long high service 发高远球 low serve 发网前球 short low service 发短低球（刚到前发球线的小球） flick serve 发平高球（比高远球要低些，比低平球要高些） drive serve/flat service 发低平球（比平高球要低些） serve deep 发深球（发至后场的球） long service 发远球（发至后场的球） return of service 接发球<br><em>4、其它</em><br>abnormal flight (球)飞行不正常 accuracy of placement 落点的准确性 miss 击球未中</p>
+<h1 id="战术用语"><a href="#战术用语" class="headerlink" title="战术用语"></a>战术用语</h1><p>front and back （双打）前后站位打法（常用于混双） rotation system （双打）轮转配合打法 half-court shot 半场球（对付前后站位防守的打法） defense and fight back防守反击 net game 网前打法 net play 网前打法 pairing （双打）配对 partner （双打）同伴 players’ positions 队员方位</p>
+<h1 id="规则用语"><a href="#规则用语" class="headerlink" title="规则用语"></a>规则用语</h1><p><em>1、 一般规则</em><br>game 局（一般一场比赛有三局）<br>game point 局点<br>match 场<br>match point 场点、赛点（三局两胜制比赛的决胜球）<br>linesman 司线员<br>referee 裁判员<br>service judge 发球裁判员<br>mixed doubles 混合双打<br>men’s singles 男单<br>men’s doubles 男双<br>women’s singles 女单<br>women’s doubles 女双<br><em>2、比赛过程</em><br>change the server/alternate in serving 换发球<br>change courts 交换场地<br>change service courts 互换左右发球区，互换方位<br>choice of court ends or service 选择场地或发球权<br>odd number of points 单数分数<br>even number of points 双数分数<br>order of service 发球次序<br>“Love all ,play!” 零比零，开始比赛<br>“Set 2 points!” 再赛两分<br>in（球）在界内<br>out（球）在界外<br>receiving side 接发球一方<br>“Service over!” 换发球<br><em>3、犯规用语</em><br>racket head above the hand 过手（拍框上沿高于手，发球违例）<br>serving above the waist （过腰，击球点高于腰部的发球，发球违例）<br>serve from the wrong-service court 发球站错方位<br>short （发球时的）短球<br>touch the net 触网<br>unclean hit 有拖带动作的击球<br>double hit 连击<br>fault ①失误 ②犯规<br>faulty serving 发球违例<br>foul hit 击球犯规<br>out of position 站错位<br>good return 合法还击<br>good service 合法发球<br>score cancelled 得分无效</p>
+
+          
         
       
     </div>
@@ -1766,6 +1702,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 15:25:51" itemprop="dateModified" datetime="2018-05-30T15:25:51+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1789,16 +1741,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/新闻/lengend-lyd-pg/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/新闻/lengend-lyd-pg/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1826,15 +1768,19 @@
       
         
           
-          Don Hearn（Badzine）/图文，弗洛缺德/译。四大天王之一皮特•盖德上周末在 2017 王者之志世界巡回韩国站与四位本地传奇球员打球。他先同李龙大搭档，与雅典奥运会双打冠军金东文和河泰权以及现场组合柳延星/河泰权分别进行了上下半局的双打友谊赛；还和李龙大开了局单。 “王者之志”系列活动由羽毛球设备制造商 Yonex 举办，目前已确认加入的超一流球星有丹麦的皮特•盖德、印尼的陶菲克·希达
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/新闻/lengend-lyd-pg/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>Don Hearn（Badzine）/图文，弗洛缺德/译。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfxnh0MXJeNjf4iavibEVof61XmmXwGL5r1ATRUpnUgy3SZxQPmYztwmpw/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>四大天王之一皮特•盖德上周末在 2017 王者之志世界巡回韩国站与四位本地传奇球员打球。他先同李龙大搭档，与雅典奥运会双打冠军金东文和河泰权以及现场组合柳延星/河泰权分别进行了上下半局的双打友谊赛；还和李龙大开了局单。 <img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfS2sFjt5auRpfb5ushfYsHYGXmc82woxDKf34MRiazYRibNtoHibfqzs6Q/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>“王者之志”系列活动由羽毛球设备制造商 Yonex 举办，目前已确认加入的超一流球星有丹麦的皮特•盖德、印尼的陶菲克·希达亚特、马来西亚的李宗伟、中国的林丹以及在今年全英赛期间宣布新晋加入的韩国双打巨星李龙大。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYf3SKOUniaib1icLiaplqJ2aIT6WPEen2jR4k4ibCXR5XaTdltzFZzaA2xadw/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>2000 年悉尼奥运会先后负于吉新鹏和夏煊泽，痛失奥运奖牌的遗憾，对于盖德而言能与奥运会金牌搭档金东文、河泰权交手是非常美好的经历。<br>与金东文和他的教练河泰权一样，李龙大表示在这样的活动中，他也只是个小学生：“我是看他们打球长大的，能和他们坐在一起荣幸之至。希望热爱羽毛球的朋友们可以关注王者之志的系列活动。”<br>当被问及现代羽毛球发展及法国国家队教练的新身份时，盖德口若悬河：“比赛瞬息万变，在所有项目中韩国都挺牛逼，尤其是双打，当然单打也还不赖。我想最大的目标还是如何投身于羽毛球事业成为一名球员，每天 24 小时的全情投入并跻身于世界一流水准，然而这三个‘少年’就做得很好。”<br>“这也是我们向所有年轻球员传递的信息，付出终有回报，你们必须尽最大努力来达到职业生涯巅峰。”<br>“在当今高水平比赛中，无论单打还是双打，只依赖防守或进攻都不行，一定要做到全面。我训练法国的小儿郎时，就是这样的想法，也是巨大的挑战。而在韩国和丹麦就不一样，这两个国家有很浓厚的羽毛球文化。”<br>“在比赛中的方方面面，包括技术、战术、体能和心理都至关重要。因为羽毛球是一项复杂的运动，所以我们才会如此热爱。作为教练，我必须激励运动员在专项上竭尽所能。练长板补短板，才能走得更远。”<br>“同时还必须时刻提醒自己，羽毛球是一项游戏。尽管我们的筹码是青春无悔日以继夜的苦练，但你要享受比赛，享受成功和失败。因为在别人眼里的坚持，是我们心中的热爱（这也是我给羽毛球技术定的基调）。”<br>河泰权在提问环节上被问到以前是否于盖德交过手时，想起了 1996 的马来西亚公开赛，河泰权当时的搭档是现在韩国白发总教练姜京珍，盖德当时的双打搭档是 Michael Søgaard ，结果河泰权和姜京珍以 2-1 轻松获胜。<br>后盖德确认，他还在世青赛的男双比赛，当时是替另一个小伙纸上场，眼里满满的都是青葱岁月。<br>“你们可能都知道甚至看过盖德的成名假动作，所以我也有针对性的研究了不少视频，在今天的比赛上尽量争取不让他有机会做出来。”<br>为此河泰权认真的做了很多练习和比赛，甚至还跑了步保证体能储备，所以他有必胜的信念。 事实上河泰权是目前为止最活跃的一个，不管是场上还是场下，这身体不是盖的，40 多岁还能跳杀。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfpDnuRWlDmzm9rOcRAp7U2Th7iaicVnfDqtFXXdD3VNvLwe17EHNoE6Kw/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>而在比赛金东文的问题比较多，尤其是步伐，坑队友啊！于是后半局河泰权申请换搭档。 被批准后，河泰权果断的喊了李龙大的搭档柳延星。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfAPCc5LMF7vIuR5Lk827Fiby8udA7gIojOhgia3TvJicAhia912C8tIsBVA/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>金东文是个学院派，在圆光大学成为运动生理学教授后教练和打球的工作就很少了，似乎对羽毛球的热情不再高涨。<br>“主要还是没时间训练，重在参与吧”，金东文还被搭档河泰权开玩笑称读书读得肌肉退化了。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYf8OTVOKoiaLqqcQ40nLwSsXic3UutwtuIcWMDk0guqShuibnuCpG8yTCDA/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>不过接下来指导学龄前儿童的环节河泰权让给了金东文和柳延星，在这之前金东文和李龙大还打了一小段娱乐的混双比赛。<br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfU5U4d2qLrpmMQ9jXsjDowDb6U54GKroKagUMG6KpenmbmpFD5NuFRw/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>最后盖德和李龙大组合以两分优势赢得比赛。<br>上半局李龙大/盖德VS金东文/河泰权视频：  下半局李龙大/盖德VS柳延星/河泰权视频：  双打之后开单，李龙大以 8-7 结束赢了前世界排名第一单打巨星盖德。<br>腾讯视频可能会降低码率，附1080P60FPS的网盘链接：<a href="https://pan.baidu.com/s/1qXGQfM0，喜欢的朋友可以下载收藏。" target="_blank" rel="noopener">https://pan.baidu.com/s/1qXGQfM0，喜欢的朋友可以下载收藏。</a><br><img src="http://mmbiz.qpic.cn/mmbiz_jpg/vc56PibjXkqWLO8HicOXib0XmicqaxqW3dYfaPoP7EqR6syYuaLaFtQb8RiaJpEypiasRp9PSX1Ihtia092TmiarnNBR0g/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>你眼里的坚持，是我心中的热爱。享受每场比赛，珍惜每一个球友，文章错了可以改，时光一去不再来。<br>志同道合的朋友们，我们就通过在球场上挥洒汗水、交流心得来享受人生。 胜利继 YONEX 之后拿下了丹麦国家队的赞助；远赴美国的几个球友，此时此刻可能正在约球。<br>很多人并不会理解，但我们就是喜欢，怎么办呢？</p>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484302&amp;idx=1&amp;sn=5aa9403fe0cca31414e5cc596085f9dc&amp;chksm=ebdb3269dcacbb7fbbb4d971e4f0322b9700784c9ebac5d97d2d2fd3fcface7f64a2c3d26121&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：高远球（1）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484311&amp;idx=1&amp;sn=1c5871a12e751f399b9bfc3b12af0234&amp;chksm=ebdb3270dcacbb66e76b95474d22c307ec496074ab0fa904dde8dd305600a8a22d5a7e4573b2&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：高远球（2）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484250&amp;idx=1&amp;sn=82ea5154e339a8180026d4552b8e1a23&amp;chksm=ebdb32bddcacbbab44226b23f8c5458841acbabb95c7e817b0b0ee1728a32f44367f599848da&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：吊球（1）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484271&amp;idx=1&amp;sn=54fec5c7d138a76243ecd11f80588086&amp;chksm=ebdb3288dcacbb9e319457f820fa6419ecd9ffdf09ac08240f929ff7a0927bb6e1ae127b7992&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：吊球（2）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484285&amp;idx=1&amp;sn=c9fa8a12a4ffa2386d2f1d577b667bd7&amp;chksm=ebdb329adcacbb8ca69a90a1d2b768079743dc3d421a50933918b2fc4c695012cf1e96ad58ff&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">请不要自杀！你还没学反向吊球</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484152&amp;idx=1&amp;sn=9e86999e2e36fb7ab8137cb515799dad&amp;chksm=ebdb331fdcacba09229d35ac0d105eba26920c2e22c7e9e53db9326cf662e919d0838c3c5147&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">前后场抢球打破头到底是谁的锅</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484167&amp;idx=1&amp;sn=b0cd276b2c525ec597487b64ee559e0b&amp;chksm=ebdb32e0dcacbbf619683e1adb6444cbc798e6f42efeb8a49f776cbdc123274d26b1e14da754&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">可能是目前为止最快的几个杀球</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484311&amp;idx=2&amp;sn=ff81fe7b2bfa7ab37e8b69a97465dba3&amp;chksm=ebdb3270dcacbb664e29190c1b9a1076cb76f10c512b62f2b685c3fe7c1f44ad462d196250b4&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">澳大利亚公开赛拍线的那些事儿</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -1936,6 +1882,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:47:06" itemprop="dateModified" datetime="2018-05-30T14:47:06+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1959,16 +1921,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/net-lift-lindan-mirror/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/net-lift-lindan-mirror/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1996,16 +1948,24 @@
       
         
           
-          放网与搓球不同，是一个在远网和近网、主动和被动情况下都可以使用的击球技术。过网时由于没有横向的旋转与纵向的翻滚，可以更加贴网。可以调动对手、积累优势。
-正手放网上图使用标准并步，持拍手同侧脚在前，两脚距离比肩略宽。最后蹬跨到右侧网前时，前臂随动向右前上方伸出，带外旋同时手腕外展。击球时采取在低位手指上提闪动发力使球过网前即向前下方贴网而过，或过网后垂直下落。早年放网标准是过网后垂直下落，而近些年随
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/net-lift-lindan-mirror/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>放网与搓球不同，是一个在远网和近网、主动和被动情况下都可以使用的击球技术。过网时由于没有横向的旋转与纵向的翻滚，可以更加贴网。可以调动对手、积累优势。<br><img src="http://mmbiz.qpic.cn/mmbiz_gif/vc56PibjXkqViaONcMCgAx1RZG8KVRXwicLr7gVHyzuZPmIQS6WnGBVOLC3QHdHzcVUzTfqcOOCwUd82EcmIM4xIg/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h2 id="正手放网"><a href="#正手放网" class="headerlink" title="正手放网"></a>正手放网</h2><p>上图使用标准并步，持拍手同侧脚在前，两脚距离比肩略宽。最后蹬跨到右侧网前时，前臂随动向右前上方伸出，带外旋同时手腕外展。<br>击球时采取在低位手指上提闪动发力使球过网前即向前下方贴网而过，或过网后垂直下落。<br>早年放网标准是过网后垂直下落，而近些年随技术和速度的不断发展，放网的最高点已由网带正上方变为本方一侧，目的是防止被对方封网。<br>印象中比较确切的一次革新来自李宗伟曾经的教练叶诚万。<br><img src="http://mmbiz.qpic.cn/mmbiz_gif/vc56PibjXkqViaONcMCgAx1RZG8KVRXwicLhEQuwEQTkuJ0uGQykWicW8MubEN1fy1E6eVicosq625gHUNdBJO2UFbA/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>距离较远时，可以选择交叉步上网。上图包含启动、交叉步和最后的蹬跨步所有环节，需要练习步法的朋友们可以反复观看、模仿。<br>对步法的具体环节不了解的朋友，可以查看<a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484154&amp;idx=1&amp;sn=9de0fdc399bd1e652dc894b101f45ec7&amp;chksm=ebdb331ddcacba0b20b2fa096f086545a66ea78c814ef6818d1c2933fae9743efb8957892b78&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">之前的文章</a>。</p>
+<h2 id="反手放网"><a href="#反手放网" class="headerlink" title="反手放网"></a>反手放网</h2><p>与正手类似，接对方重复点时可直接与并步或垫步结合。要点除握拍更改为反手握拍外，几乎与正手没有太大区别。<br><img src="http://mmbiz.qpic.cn/mmbiz_gif/vc56PibjXkqViaONcMCgAx1RZG8KVRXwicLw1TzmlSU1nmNTXLchjdib1UB1qf3Yla4uR0ElzI3KYicf5ohGSjiaycoQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>无论是正手还是反手，放网后小垫步保持节奏盯紧网前防止对方回放，切忌大幅后撤。<br><img src="http://mmbiz.qpic.cn/mmbiz_gif/vc56PibjXkqViaONcMCgAx1RZG8KVRXwicLKeyAZY9F7iblvHWNdyXM5qDwOzrpxibfOKG3n7TNBh24O3adKPUSq26g/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>从右场区一步回左场网前接吊并回放的步法如上图所示。图中林丹接吊时考虑来球速度，有部分切击。<br>在实战使用时，也请朋友们考虑到来球的角度、速度和力度，进行相应的借力或切削卸力。</p>
+<h2 id="延伸用法"><a href="#延伸用法" class="headerlink" title="延伸用法"></a>延伸用法</h2><p>接发球假动作改放远角是精典技术。接球动作最后阶段诱使对方提前启动后，翻转拍面弹击球托反向击球，导致对方措手不及。<br><img src="http://mmbiz.qpic.cn/mmbiz_gif/vc56PibjXkqViaONcMCgAx1RZG8KVRXwicL5ibMU3bFZkHyibAT1diakhAibicwXicV4Ygbf9GbAYJUNpmWz5tCH55HXicpQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>除此之外，还可以利用一致性来进行挑球、推球、勾对角等，这是之后会涉及的内容。</p>
+<h2 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h2><p><strong>1、多球训练。</strong><br>搭档扔网前同一落点或两个落点的多球，本方定点放网或结合步法上网后放网。 要求扔球落点、速度、节奏和高度稳定；<br>放网的落点先尽量过网，再尽量贴网逐步提高要求。 熟练后，可对扔球的落点、速度、节奏和高度进行随机的变化增加练习难度。<br><strong>2、网前对练。</strong><br>与多球训练相比，优点是节约资源，是熟练后的一种练习方法。缺点也比较明显，如果两人的水平不相当、要求过高或失误过多，会造成经常捡球影响练习的情绪。<br>以上，仅提供部分练习方法。 如需解锁更多姿势请赞赏后提要求，也可以在网上查询相关视频或文章。<br>但需要注意，网上并非一家之言，是否适合自己在练习时要多辨别。<br>另外，练习讲究的是持之以恒。一项技术并非几次练习后就能熟练掌握，有上网发贴问问题的时间，不如再放上一筐球仔细体会细微的手感。<br>不练千日功，何来千斤力？祝球友们球技越来越精湛。</p>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484302&amp;idx=1&amp;sn=5aa9403fe0cca31414e5cc596085f9dc&amp;chksm=ebdb3269dcacbb7fbbb4d971e4f0322b9700784c9ebac5d97d2d2fd3fcface7f64a2c3d26121&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：高远球（1）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484311&amp;idx=1&amp;sn=1c5871a12e751f399b9bfc3b12af0234&amp;chksm=ebdb3270dcacbb66e76b95474d22c307ec496074ab0fa904dde8dd305600a8a22d5a7e4573b2&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：高远球（2）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484250&amp;idx=1&amp;sn=82ea5154e339a8180026d4552b8e1a23&amp;chksm=ebdb32bddcacbbab44226b23f8c5458841acbabb95c7e817b0b0ee1728a32f44367f599848da&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：吊球（1）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484271&amp;idx=1&amp;sn=54fec5c7d138a76243ecd11f80588086&amp;chksm=ebdb3288dcacbb9e319457f820fa6419ecd9ffdf09ac08240f929ff7a0927bb6e1ae127b7992&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">林丹右手镜像系列：吊球（2）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484285&amp;idx=1&amp;sn=c9fa8a12a4ffa2386d2f1d577b667bd7&amp;chksm=ebdb329adcacbb8ca69a90a1d2b768079743dc3d421a50933918b2fc4c695012cf1e96ad58ff&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">请不要自杀！你还没学反向吊球</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484152&amp;idx=1&amp;sn=9e86999e2e36fb7ab8137cb515799dad&amp;chksm=ebdb331fdcacba09229d35ac0d105eba26920c2e22c7e9e53db9326cf662e919d0838c3c5147&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">前后场抢球打破头到底是谁的锅</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484167&amp;idx=1&amp;sn=b0cd276b2c525ec597487b64ee559e0b&amp;chksm=ebdb32e0dcacbbf619683e1adb6444cbc798e6f42efeb8a49f776cbdc123274d26b1e14da754&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">可能是目前为止最快的几个杀球</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484311&amp;idx=2&amp;sn=ff81fe7b2bfa7ab37e8b69a97465dba3&amp;chksm=ebdb3270dcacbb664e29190c1b9a1076cb76f10c512b62f2b685c3fe7c1f44ad462d196250b4&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">澳大利亚公开赛拍线的那些事儿</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI4NjU5OTMwNA==&amp;mid=2247484333&amp;idx=1&amp;sn=f422ef551811487987c908815ea866c2&amp;chksm=ebdb324adcacbb5cc3e09ab83899fd0cdfafd884adbfa51be8c105980441e623adaab56ba252&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">李龙大和盖德开单你猜猜谁赢了？</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -2083,6 +2043,459 @@
           </div>
 
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">201</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2093,40 +2506,6 @@
             </div>
           
 
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/xjvf" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://plus.google.com/+younzeryue" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://twitter.com/badmintontips" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.facebook.com/badmintonqna" target="_blank" title="FB Page"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://instagram.com/yumaoqiujishu" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://weibo.com/badmintontips/" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -2159,7 +2538,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">弗洛缺德</span>
 
@@ -2171,11 +2550,15 @@
 
 
 
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
+  <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.3.0</div>
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
 
 
 
@@ -2223,8 +2606,6 @@
 
 
 
-  
-
 
 
 
@@ -2254,11 +2635,6 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
@@ -2271,13 +2647,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
-
-
 
   
 
@@ -2313,353 +2682,9 @@
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'DspDTyBGcFoTiKPAusMoAXJS-gzGzoHsz',
-        appKey: 'w9TdbhQeXRE2OHlz1qgs7lRy',
-        placeholder: '没病走两步？',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 
@@ -2670,46 +2695,10 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
 
   
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "box";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
-    
-  </script>
-
   
 
   

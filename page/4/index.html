@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,10 +22,6 @@
 <meta name="theme-color" content="#222">
 
 
-
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
 
 
@@ -53,10 +49,6 @@
 
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -92,20 +84,20 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    fastclick: ,
-    lazyload: ,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: "没病走两步？",
-      labels: {"input_placeholder":"搜索你感兴趣的文章","hits_empty":"没发现和 ${query} 有关的内容","hits_stats":"${hits} results found in ${time} ms"}
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
@@ -235,88 +227,28 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">Home</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">About</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">Categories</a>
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">Archives</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-    <a href="/atom.xml" rel="section">Sitemap</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
-    <a href="/404/" rel="section">Commonweal 404</a>
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
       
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            Search</a>
-        </li>
       
     </ul>
   
 
   
+    
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
 
-
-
-    </div>
   
 </nav>
 
@@ -335,9 +267,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
           
           <div id="content" class="content">
             
@@ -408,6 +337,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-29 23:57:03" itemprop="dateModified" datetime="2018-05-29T23:57:03+08:00">2018-05-29</time>
+              
+            
           </span>
 
           
@@ -431,16 +376,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/视频/smash-350/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/视频/smash-350/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -468,16 +403,9 @@
       
         
           
-          https://v.qq.com/iframe/player.html?vid=e03460i2cfr&amp;tiny=0&amp;auto=0 看了膝盖都疼。
+            <p><a href="https://v.qq.com/iframe/player.html?vid=e03460i2cfr&amp;tiny=0&amp;auto=0" target="_blank" rel="noopener">https://v.qq.com/iframe/player.html?vid=e03460i2cfr&amp;tiny=0&amp;auto=0</a> 看了膝盖都疼。</p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/视频/smash-350/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -579,6 +507,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 13:13:10" itemprop="dateModified" datetime="2018-05-30T13:13:10+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -602,16 +546,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/视频/china-open-2016-fuzhou-sf-hightlights/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/视频/china-open-2016-fuzhou-sf-hightlights/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -639,16 +573,9 @@
       
         
           
-          回顾一下老视频：印尼选手真的都是技术型，对上彩虹完全就是四两千斤。安赛龙除了年轻冲动爱脸红好像没别的毛病，第二局 21:9 拿谌龙之后果然又翻回去。伊斯干达和辛杜长得是真到位。。。 2016福州中国公开赛半决赛亮点（腾讯视频）
+            <p>回顾一下老视频：印尼选手真的都是技术型，对上彩虹完全就是四两千斤。安赛龙除了年轻冲动爱脸红好像没别的毛病，第二局 21:9 拿谌龙之后果然又翻回去。伊斯干达和辛杜长得是真到位。。。 <a href="http://v.qq.com/page/h/t/f/h0347asnytf.html" target="_blank" rel="noopener">2016福州中国公开赛半决赛亮点（腾讯视频）</a></p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/视频/china-open-2016-fuzhou-sf-hightlights/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -750,6 +677,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 20:24:21" itemprop="dateModified" datetime="2018-05-30T20:24:21+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -773,16 +716,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/tips/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/tips/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -810,26 +743,89 @@
       
         
           
-          以下要领和口诀，大部分来自陈小平老师的羽毛球社会体育指导员的初级培训课，其中有些整理自网络，部分口诀经过修改。
-虽然中外各地的理念和方法都可能不尽相同，但锻炼身体、提升技巧、传承体育精神是羽毛球爱好者共同的目标，欢迎球友们运用和修正。\&lt;!– more –>
-三大纪律
+            <p>以下要领和口诀，大部分来自陈小平老师的羽毛球社会体育指导员的初级培训课，其中有些整理自网络，部分口诀经过修改。</p>
+<p>虽然中外各地的理念和方法都可能不尽相同，但锻炼身体、提升技巧、传承体育精神是羽毛球爱好者共同的目标，欢迎球友们运用和修正。<br>\&lt;!– more –></p>
+<h2 id="三大纪律"><a href="#三大纪律" class="headerlink" title="三大纪律"></a>三大纪律</h2><blockquote>
+<ol>
+<li>每周一次到两次、身心健康不误事；</li>
+<li>每次一到两小时、循序渐进要坚持；</li>
+<li>每球必争不提倡、量力而行不受伤。</li>
+</ol>
+</blockquote>
+<h2 id="八项注意"><a href="#八项注意" class="headerlink" title="八项注意"></a>八项注意</h2><blockquote>
+<ol>
+<li>上网交叉步、后退小碎步；</li>
+<li>转髋面对面、转身背向前；</li>
+<li>右蹬左转三步换、左脚蹬地往前窜；</li>
+<li>踮脚放松小步跑、后退侧身方向好；</li>
+<li>上网快、抢点高、勾起对角轻飘飘；</li>
+<li>多正手、少反手、正面进攻样样有；</li>
+<li>蹬地转体肘抬起、挥臂抖腕拍握紧。发力以后要放松、下个动作好轻松；</li>
+<li>前场先左脚、后场先右脚、灵活运用好。</li>
+</ol>
+</blockquote>
+<h2 id="打球热身小提示"><a href="#打球热身小提示" class="headerlink" title="打球热身小提示"></a>打球热身小提示</h2><blockquote>
+<ol>
+<li>先跑步、后做操、准备活动很重要；</li>
+<li>挥手臂、转脚腕、颈部更要管一管；</li>
+<li>先抽挡、后平高、逐渐加量控制好；</li>
+<li>小提示、掌握好、防止受伤少不了。</li>
+</ol>
+</blockquote>
+<h2 id="准备姿势要领（持拍弓架）"><a href="#准备姿势要领（持拍弓架）" class="headerlink" title="准备姿势要领（持拍弓架）"></a>准备姿势要领（持拍弓架）</h2><blockquote>
+<p>胸前举眼前过、准备姿态不放过，抬头挺胸拍举早、两个夹角控制好。</p>
+</blockquote>
+<h2 id="主动上网步法"><a href="#主动上网步法" class="headerlink" title="主动上网步法"></a>主动上网步法</h2><blockquote>
+<p>上网交叉步、后退小碎步，上网是两步、后退用四步，左脚一小步、右脚一大步，左脚先右脚后、左脚小右脚大。</p>
+</blockquote>
+<h2 id="主动时后场步法："><a href="#主动时后场步法：" class="headerlink" title="主动时后场步法："></a>主动时后场步法：</h2><blockquote>
+<p>右脚先行左脚后、两腿交叉比碎步（正手球），右蹬左转三步换、左脚蹬地往前窜（头顶球）。</p>
+</blockquote>
+<h2 id="双打三原则"><a href="#双打三原则" class="headerlink" title="双打三原则"></a>双打三原则</h2><blockquote>
+<p>宁高勿低、宁轻勿重、宁近勿远</p>
+</blockquote>
+<h2 id="双打五要素"><a href="#双打五要素" class="headerlink" title="双打五要素"></a>双打五要素</h2><blockquote>
+<p>多跑动、多换位、多抽挡、多杀球、多抢点</p>
+</blockquote>
+<h2 id="训练六方法"><a href="#训练六方法" class="headerlink" title="训练六方法"></a>训练六方法</h2><blockquote>
+<ol>
+<li>没有负荷的训练是无用的训练</li>
+<li>没有强度的训练是无效的训练</li>
+<li>没有恢复的训练是危险的训练</li>
+<li>没有快乐的训练是无味的训练</li>
+<li>没有方法的训练是盲目的训练</li>
+<li>没有控制的训练是徒劳的训练</li>
+</ol>
+</blockquote>
+<h2 id="羽毛球双打“三字经”"><a href="#羽毛球双打“三字经”" class="headerlink" title="羽毛球双打“三字经”"></a>羽毛球双打“三字经”</h2><h3 id="一、发接发"><a href="#一、发接发" class="headerlink" title="一、发接发"></a>一、发接发</h3><blockquote>
+<p>发接发，最关键，球贴网，难变线； 发小球，不退还，盯对手，须靠前； 降重心，好应变，不下蹲，挡视线； 发高球，非重点；示同伴，守一边； 看对手，接球难，失重心，守网前； 接发球，要善变，扑推搓，见机选； 抢高点，别手软，扑放网，封网前； 球速慢，常被拦，假动作，两腰间； 瞄左边，推右边，看对角，搓网前； 球过顶，回球难，或劈吊，或高远； 第三拍，转折点，全力封，低和慢； 看拍型，做预判，快举拍，利同伴； 防对手，搓网前，推脑后，是首选； 推反手，莫乐观，平行站，更保险； 敌被动，重网前，左右封，鬼门关； 攻与防，常变换，不急躁，神相伴；</p>
+</blockquote>
+<h3 id="二、进攻"><a href="#二、进攻" class="headerlink" title="二、进攻"></a>二、进攻</h3><blockquote>
+<p>进攻势，前后站，向下压，很关健； 怕出界，攻中间，盯李四，打张三； 左和右，近和远，控节奏，多变幻； 强攻累，贵在变，上拍硬，下拍软； 过顶球，给同伴，后场攻，前场拦； 不封网，很可怜，被挡网，干瞪眼； 攻人术，仔细看，找弱者，别更换； 封网快，抢高点，击球前，看对面； 扑高点，稳且慢，扑与搓，随机变； 后场吊，位可换，边路杀，防变线； 见同伴，杀向前，及时退，守后边； 两人间，似线连，离不过，三米半； 功利心，要改变，少失误，持久战； 有优势，控局面，看对手，下菜单； 杀与吊，因时选，轻与重，多变幻； 攻弱者，攻中间，形似杀，吊网前； 正手防，杀左边，反手防，杀右边； 握拍高，杀脚尖，握拍低，杀胸前； 左上角，右下边，有死穴，两肋间； 会封网，不简单，终结者，在网前； 后场吊，逼向前，须防范，勾对边； 扑网下，搓网前，貌似搓，推底线； 抢高点，刻意慢，诱对手，奔网前； 敌不动，搓近前，敌向前，推后边； 龙出海，虎离山，打空档，一声叹； 看对手，选落点，不丧失，主动权；</p>
+</blockquote>
+<h3 id="三、防守"><a href="#三、防守" class="headerlink" title="三、防守"></a>三、防守</h3><blockquote>
+<p>被动势，难乐观，巧过渡，很关健； 遇封网，强搓难，明智者，挑后边； 认被动，挑高远，球坠落，两线间； 网前角，挑底线，直线退，莫流连； 后同伴，回高远，斜线退，守一边； 防斜线，靠中间，防直线，靠边站； 变线球，落点偏，要发力，抽高远； 接杀前，看落点，防守位，等腰线， 严防守，固而坚，运动中，接杀难； 抓战机，一瞬间，要反击，快变线； 遇斜线，变直线，遇直线，变斜线； 选落点，左右换，平抽挡，有胜算；</p>
+</blockquote>
+<h3 id="四、僵持"><a href="#四、僵持" class="headerlink" title="四、僵持"></a>四、僵持</h3><blockquote>
+<p>抢网前，搓球难，想贴网，网做鞍； 平抽球，快如电，不下蹲，难应变； 同伴抽，看网前，先协防，后轮转； 改僵持，不相瞒，或过顶，或变线； 轻挡网，球下探，貌似软，胜炮弹； 攻与防，巧转换，要珍惜，主动权；</p>
+</blockquote>
+<h3 id="五、安全文明"><a href="#五、安全文明" class="headerlink" title="五、安全文明"></a>五、安全文明</h3><blockquote>
+<p>球场上，乐为先，轻输赢，重安全； 对面扑，拍遮脸，回头看，更危险； 中路球，正手先，齐出手，拍要断； 讲文明，莫空谈，尊队友，敬裁判； 少说话，多流汗，共书写，友谊篇； 三字经，等闲看，同康乐，到永远！</p>
+</blockquote>
+<h2 id="羽毛球“三字诀”"><a href="#羽毛球“三字诀”" class="headerlink" title="羽毛球“三字诀”"></a>羽毛球“三字诀”</h2><h3 id="论道"><a href="#论道" class="headerlink" title="论道"></a>论道</h3><blockquote>
+<p>三字诀、为启蒙、养品德、育才能 先识字、后成诵、先习行、后理性 勤于学、知识博、勤操作、技艺活 勤则兴、惰则废、讲成功、勤补拙 学不思、则无益、思不学、心则迷 智者学、精于苛、细切磋、如琢磨 愚者学、心无寄、毁于随、荒于嬉 如行舟、在逆水、不前进、必后退 初学难、再生厌、做到底、是硬汉 杵磨针、石滴穿、功夫到、摧至坚 有恒者、意志坚、经百折、情不迁 千里行、足下起、自强者、当不息 进取心、如赛跑、优胜者、争分秒 欲有为、强身体、欲成才、恒学习 各有短、各有长、善合作、包容广 谁无过、改为胜、谁无怨、解为重 人相处、和为尚、知进退、貌温良 行有则、语不狂、是为礼、敬之常 官大小、莫知晓、钱多少、有烦恼 体康健、众人羡、身心好、唯珍宝 即有钱、又有闲、抚今昔、胜当年 健康在、子不怪、只留爱、不留债 对饮食，勿拣择，食适可，勿过则 不健身、欠思量、业成了、人没了 不锻炼、去医院、病膏肓、房卖光 亲爱我，孝何难，老易至，惜此时 羽毛球、众人求、羽毛转、人流汗 无风雨、勿室外、即养颜、又防晒 适老人、利孩童、年青人、呈英雄 即文明、又上档、淑女打、更潇洒 球几克、拍几两、隔网争、快乐享 买球拍、几百元、入会员、节约钱 礼之先、和为贵、年方少、有定位 科学练、适度争、公平赛、好氛围 知者乐、行与和、乐不松、和不同 物类聚、人群分、球友情、合不离 身体好、心不老、看的透、品位高 忍的过、看的破、拿的起、放的下 爱与爱、需呵护、心与心、需尊重 皓首颜，童心在，耄耋年，人健在 莫欺心、勿伤人、情无期、爱无限</p>
+</blockquote>
+<h3 id="知新"><a href="#知新" class="headerlink" title="知新"></a>知新</h3><blockquote>
+<p>古圣贤、尚勤学、新大千、何不为 口而诵、心而惟、朝于斯、夕于斯 三纪律、八注意、个中理、须牢记 请教练、如淘宝、收益多、不得了 身手好、人逍遥、打基础、心清楚 练之初、多模仿、学方法、莫疏忽 先跑步、后做操、预热好、很重要 挥手臂、转脚腕、颈部位、更要管 先抽挡、后平高、渐加量、控制好 小提示、掌握好、防受伤、少不了 上身稳、下肢灵、手上活、脚要灵 双打规、高胜低、轻压重、近勿远 我为主、知与彼、灵活用、随机变 意识好、战术活、配合好、相互夸 新大众、条件好、掌握度、悠着跑 三字诀、有帮助、不清楚、请求助</p>
+</blockquote>
+<h3 id="看手"><a href="#看手" class="headerlink" title="看手"></a>看手</h3><blockquote>
+<p>拍握对、指到位、虎口松、掌心空 胸前举、眼前过、好架势、不放过 抬头挺、拍举早、手和脚、协调好 功架稳、姿态美、球点准、击球狠 左手高、右手低、左肩前、右肩后 上角大、下角小、两夹角、控制好 右脚蹬、往后撤、左腿虚、右腿实 脑子快、眼睛活、手和脚、兼顾好 腿基础，手关键，鞭子甩，出手快 打老虎、拍苍蝇、打水漂、扔棍子 多正手、少反手、正面攻、样样有 上网快、抢点高、勾对角、轻漂漂 反手好、学国宝、功夫棒、身手巧 转身子、看手表、撇扇子、摁图钉 启动快、举拍早、小提示、须记牢</p>
+</blockquote>
+<h3 id="顾脚"><a href="#顾脚" class="headerlink" title="顾脚"></a>顾脚</h3><blockquote>
+<p>脚和手、巧聚首、移动快、步法带 上交叉、退碎步、多步法、要兼顾 前场步、交叉步、退后场、小碎步 上网前、用两步、退后场、四小步 左脚先、右脚后、左脚小、右脚大 双脚开、两腿屈、脚放好、腿给力 头过肩、肩过膝、膝过脚、重心好 侧左肩、踮脚退、重心升、不腾空 右蹬转、三步换、左蹬地、往前窜 踮脚跑、跨步跃、视情况、记牢靠 步法好、是基础、手法精、是关键 身不紧、心放松、鞭打力、要体现 小与大、近与远、慢与快、高与低 轻与重、攻与守、静与动、教与学</p>
+</blockquote>
 
-每周一次到两次、身心健康不误事；
-每次一到两小时、循序渐进要坚持；
-每球必争不提倡、量力而行不受伤。
-
-
-八项注意
-
-上网
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/tips/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -931,6 +927,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:02:17" itemprop="dateModified" datetime="2018-05-30T14:02:17+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -954,16 +966,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/新闻/beat-jp-wd/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/新闻/beat-jp-wd/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -991,17 +993,11 @@
       
         
           
-          今年是陈清晨、贾一凡第一次参加在迪拜举行的世界羽联年终总决赛，两个年轻的后生不负众望打败了来自日本的发球只会偷后场组合高桥礼华和松友美佐纪。
+            <p>今年是陈清晨、贾一凡第一次参加在迪拜举行的世界羽联年终总决赛，两个年轻的后生不负众望打败了来自日本的发球只会偷后场组合高桥礼华和松友美佐纪。</p>
+<p><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/12/wechatimg246.jpeg" alt="wechatimg246"></p>
+<p>　　经常偷后场的人，发球时左手总会越拿越高，一般对于裁判来说，只有抓不抓——抓是因为得利，不抓是因为质量发得的确一般或者对方早已看穿。<br>利益于世界排名第一的缘故，松糕被抓表现出不爽是人之常情，但作为理智的球迷都看得出这是球风低下的表现。<br>反观陈、贾今天的表现则可以用胆大心细、热情洋溢来形容，全场互相安慰、鼓励，补位沟通都非常积极。受到他们的感染，上至观众下至教练都很兴奋。 这并不是陈清晨和贾一凡第一次赢松糕组合了，正所谓一回生两回熟——相信后面的路还长、松糕有的忙。<br>田厚威苦战三局，最后奉献上一个 52 拍的超长对抗，最后连输几分——从实力上讲是意料之中的结局。</p>
 
-　　经常偷后场的人，发球时左手总会越拿越高，一般对于裁判来说，只有抓不抓——抓是因为得利，不抓是因为质量发得的确一般或者对方早已看穿。利益于世界排名第一的缘故，松糕被抓表现出不爽是人之常情，但作为理智的球迷都看得出这是球风低下的表现。反观陈、贾今天的表现则
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/新闻/beat-jp-wd/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1103,6 +1099,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 13:52:24" itemprop="dateModified" datetime="2018-05-30T13:52:24+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1126,16 +1138,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/badminton-movements/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/badminton-movements/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1163,18 +1165,26 @@
       
         
           
-          
-事物在运动、变化过程中，某些特征多次重复出现，其第一次开始至结束的这段时间就称为“周期”。
+            <blockquote>
+<p>事物在运动、变化过程中，某些特征多次重复出现，其第一次开始至结束的这段时间就称为“周期”。</p>
+</blockquote>
+<p><strong>羽毛球的移动周期，就是从对方击出一拍球之后到其下一次击球间的这段时间。</strong> 很多球友都会经历抠细节的阶段，常深陷其中不能自拔，偶尔也会遇到一些难题。比如高、吊、杀的动作一致性和发力差异，出球速度与收拍、回位快慢，主、被动及相应的取位等等。 体育运动的通则就是手眼身法步，理论需要系统学习，认知偏差要及时纠正，下面结合个人浅薄的实际应用简单总结羽毛球一个动作循环当中的各个环节，希望能帮助到一些球友，也欢迎回复指出不足帮助完善。</p>
+<h2 id="移动的四个环节："><a href="#移动的四个环节：" class="headerlink" title="移动的四个环节："></a>移动的四个环节：</h2><ol>
+<li>准备阶段（判断速度和高度、测距、落点、定形势、取位）</li>
+<li>移动阶段（架拍、启动、跑动、观察）</li>
+<li>击球阶段（蹬转、引拍、手法、发力）</li>
+<li>回动阶段（收拍、步伐连贯、拉重心、回中）</li>
+</ol>
+<h2 id="技术应用流程图解"><a href="#技术应用流程图解" class="headerlink" title="技术应用流程图解"></a>技术应用流程图解</h2><p><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/12/home1.png" alt="home"></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>低蹲快架早出手。快速移动时重心尽量降低便于在身体的相对高点击球，早些架拍处理追身球和杀球时更得心应手，高点不等人晚打容易错过。</li>
+<li>提前移动被晃走。如果不能准确预判，乖乖等出手。</li>
+<li>合理握拍是关键。在场地的不同位置处理不同高度和速度的球，握拍要适应调整。</li>
+<li>杀球用腿不用手。胳膊拧不过大腿就是这个道理，如果能借到腿的力，嘿嘿。不过前面说的不用手，意思是重杀需要多从腿上借力，第一请不要抠字眼儿，第二这个是个人理解欢迎不同意见。</li>
+</ol>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>理清思路和作图其实还挺耗时间的。转载请使用原图并留下出处和作者，盗为已有维权到底。</p>
 
-羽毛球的移动周期，就是从对方击出一拍球之后到其下一次击球间的这段时间。 很多球友都会经历抠细节的阶段，常深陷其中不能自拔，偶尔也会遇到一些难题。比如高、吊、杀的动作一致性和发力差异，出球速度与收拍、回位快慢，主、被动及相应的取位等等。 体育运动的通则就是手眼身法步，理论需要系统学习，认知偏差要及时纠正，
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/badminton-movements/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1276,21 +1286,27 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:05:05" itemprop="dateModified" datetime="2018-05-30T14:05:05+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/uncategorized/badminton-instructor-trainer/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/uncategorized/badminton-instructor-trainer/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1318,15 +1334,9 @@
       
         
           
-          一辈子总要有体育项目可以坚持到老，全民健身也是必然趋势。作为一个老少皆宜的项目，羽毛球不会像跑步一样受到阴晴雨雪雾霾等天气环境的制约，强度和时间又高度可控，作为一个终身运动再好不过。  个人感觉，想要从业的话，得有个证。第一能让别人大概了解能力水平，第二是给自己一个交待。在我这样的年纪，显然赢得一场高水平比赛的难度要比考取一个职业资格证要大得多。 我也算是个爱学习的人，所以理论的培训比较注意，生怕
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/uncategorized/badminton-instructor-trainer/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>一辈子总要有体育项目可以坚持到老，全民健身也是必然趋势。作为一个老少皆宜的项目，羽毛球不会像跑步一样受到阴晴雨雪雾霾等天气环境的制约，强度和时间又高度可控，作为一个终身运动再好不过。 <img src="https://yumaoqiujishu.com/wp-content/uploads/2016/12/img_36451.png" alt="img\_3645"> 个人感觉，想要从业的话，得有个证。第一能让别人大概了解能力水平，第二是给自己一个交待。在我这样的年纪，显然赢得一场高水平比赛的难度要比考取一个职业资格证要大得多。 我也算是个爱学习的人，所以理论的培训比较注意，生怕以后给人讲错。不过这次考试的难点就在于技能评定，对我来说发高远球和对打高远球的难度远高于发网前球和前后场的挑吊组合。也可能我就是贱，有简单的不练…… 一周不到的准备时间，五天的指导课。加上并不怎么充足的课下练习，以及高远球 20％ 的命中率能得到技评 61 分我已经非常满足了。除了 5 分钟临场指导以外，其它的科目发挥都不算令自己满意。 于是在接下来的时间里，还是要着重的加强一下自己的基础。学球时的一位教练跟我强调过基本技术稳定性的重要，当时我正在给他的学生放水也没太在意。而最近半年参加了几次比赛，让我重新想起了他的这番话。 这充其量只能算转行体育事业之后的一小步吧。接下来，希望我能在做教学视频、临场指导和平时训练的时候尽量少出问题，两年之后顺利晋升。</p>
+
+          
         
       
     </div>
@@ -1428,21 +1438,27 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:05:56" itemprop="dateModified" datetime="2018-05-30T14:05:56+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/uncategorized/comment-for-dumb-ass/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/uncategorized/comment-for-dumb-ass/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1470,19 +1486,12 @@
       
         
           
-          
-运动员营养好精力足需求旺盛，很正常。能控制住自己，把精力放在训练和商业活动上固然好；控制不住自己的也不在少数，看科比的告别赛的时候我不相信还有人愿意去提他的陈年旧事。知错能改，林丹不需要有人为他洗地，就事论事——出轨是错的，写这种新闻的是傻逼。
+            <blockquote>
+<p>运动员营养好精力足需求旺盛，很正常。能控制住自己，把精力放在训练和商业活动上固然好；控制不住自己的也不在少数，看科比的告别赛的时候我不相信还有人愿意去提他的陈年旧事。知错能改，林丹不需要有人为他洗地，就事论事——出轨是错的，写这种新闻的是傻逼。</p>
+</blockquote>
+<p>评论文章 <a href="http://www.badmintoncn.com/view-18995-1.html" target="_blank" rel="noopener">林丹出轨门后首秀是救赎or逃避 他本能做得更好</a></p>
 
-评论文章 林丹出轨门后首秀是救赎or逃避 他本能做得更好
-
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/uncategorized/comment-for-dumb-ass/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1584,21 +1593,27 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:06:46" itemprop="dateModified" datetime="2018-05-30T14:06:46+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/uncategorized/comments-for-athletes/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/uncategorized/comments-for-athletes/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1626,15 +1641,9 @@
       
         
           
-          “因她身高只有 1.64 米”，156 公分的奥园希望和山口莤已哭晕在厕所。然而皮红艳 1999 年在美国羽毛球公开赛已经拿到冠军了，并不是像原文标题写的那样去了法国才夺冠（虽然到了法国之后还是继续拿而且拿得更多）。宁做鸡头、不当凤尾，选择一个好的环境去发展无可厚非。 为自己喜欢的事情付出辛苦理所当然。即使不能理解，也要给予尊重。看不惯那些以己度人又略带道德绑架的关怀，从饭钱里挤出书、电影票、游戏
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/uncategorized/comments-for-athletes/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>“因她身高只有 1.64 米”，156 公分的奥园希望和山口莤已哭晕在厕所。然而皮红艳 1999 年在美国羽毛球公开赛已经拿到冠军了，并不是像原文标题写的那样去了法国才夺冠（虽然到了法国之后还是继续拿而且拿得更多）。<br>宁做鸡头、不当凤尾，选择一个好的环境去发展无可厚非。 为自己喜欢的事情付出辛苦理所当然。即使不能理解，也要给予尊重。<br>看不惯那些以己度人又略带道德绑架的关怀，从饭钱里挤出书、电影票、游戏机、球拍和玫瑰的事情，很难理解么？<br>对体制而言，永远不缺好运动员，但“良禽择木而栖”，好种子也要找到适合它的土壤。<br>通过 <a href="http://www.badmintoncn.com/view-19004-1.html" target="_blank" rel="noopener">羽坛奇才得罪教练无路可走 加入法国拿世界冠军 中羽在线 第一羽毛球互动门户</a></p>
+
+          
         
       
     </div>
@@ -1736,6 +1745,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:04:24" itemprop="dateModified" datetime="2018-05-30T14:04:24+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1759,16 +1784,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/装备/ab-string-yonex/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/装备/ab-string-yonex/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1796,22 +1811,21 @@
       
         
           
-          1.腹肌中间的那条沟。
-2.YONEX 最新推出的 BG-AB 组合羽毛球线。
-　　在网球里叫子母线。两条完全不同粗细不同编织的线组合，横竖线粗细各异，摩擦力大。快速回击、穿透防守与强烈旋转，切球的感觉非常细腻，劈调效果相当明显。实打爆发力好兼顾控制力，是一款感情丰富，甜味适中，略带花椒香的羽毛球线。
+            <h2 id="1-腹肌中间的那条沟。"><a href="#1-腹肌中间的那条沟。" class="headerlink" title="1.腹肌中间的那条沟。"></a>1.腹肌中间的那条沟。</h2><p><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/12/c842a0ab-923e-471d-9fc9-1f46f06e1f50.jpg" alt="c842a0ab-923e-471d-9fc9-1f46f06e1f50"></p>
+<h2 id="2-YONEX-最新推出的-BG-AB-组合羽毛球线。"><a href="#2-YONEX-最新推出的-BG-AB-组合羽毛球线。" class="headerlink" title="2.YONEX 最新推出的 BG-AB 组合羽毛球线。"></a>2.YONEX 最新推出的 BG-AB 组合羽毛球线。</h2><p><img src="https://yumaoqiujishu.com/wp-content/uploads/2016/12/57ad69ac77cf9.jpg" alt="57ad69ac77cf9"></p>
+<p>　　在网球里叫子母线。两条完全不同粗细不同编织的线组合，横竖线粗细各异，摩擦力大。快速回击、穿透防守与强烈旋转，切球的感觉非常细腻，劈调效果相当明显。实打爆发力好兼顾控制力，是一款感情丰富，甜味适中，略带花椒香的羽毛球线。</p>
+<blockquote>
+<p>BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球</p>
+</blockquote>
+<ul>
+<li>长度：竖线－5.5米；横线－5米</li>
+<li>线径：竖线－0.67毫米；横线－0.61毫米</li>
+<li>材质：竖线－高强度尼龙复丝；横线－高分子尼龙复丝</li>
+<li>颜色：横线－白；竖线－红</li>
+</ul>
+<p>不过摩擦力强大的竖线和极细高弹的横线组合不禁令人对他的耐用性感到有点淡淡的忧伤。微信公众号网羽有约体育在做活动，<strong>掌柜的将会在文章评论中送出三条AB线，需要的球友快去关注最新一期文章吧</strong>。</p>
 
-BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
-
-
-长度：竖线－5.5米；横线－
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/装备/ab-string-yonex/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1913,6 +1927,22 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-30 14:15:50" itemprop="dateModified" datetime="2018-05-30T14:15:50+08:00">2018-05-30</time>
+              
+            
           </span>
 
           
@@ -1936,16 +1966,6 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/经验/how-to-choose-badminton-clubs/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/经验/how-to-choose-badminton-clubs/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1973,16 +1993,28 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
       
         
           
-          本文编辑自 游游 投稿 1作为一名嘎嘎新的羽毛球选手，选择一个好的俱乐部 ＝ 选择了一个积极健康的业余爱好社区氛围，可以尽量少走弯路、不受伤、快速提高，同时也能享受到羽毛球这项运动带来的快乐。
-好的羽毛球俱乐部是酱婶儿的有从新手入门练习到中高级对抗的梯次配置2 。类似的梯次配置在北京的忘不了、冰羽、网羽有约等很多俱乐部都有，有些俱乐部还会无偿提供新手培训3，也会为那些想在百尺竿头更进一步的会员提供
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/经验/how-to-choose-badminton-clubs/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p><em>本文编辑自 游游 投稿</em> <a href="#fn1">1</a><br>作为一名嘎嘎新的羽毛球选手，选择一个好的俱乐部 ＝ 选择了一个积极健康的业余爱好社区氛围，可以尽量少走弯路、不受伤、快速提高，同时也能享受到羽毛球这项运动带来的快乐。</p>
+<h2 id="好的羽毛球俱乐部是酱婶儿的"><a href="#好的羽毛球俱乐部是酱婶儿的" class="headerlink" title="好的羽毛球俱乐部是酱婶儿的"></a>好的羽毛球俱乐部是酱婶儿的</h2><p>有从新手入门练习到中高级对抗的梯次配置<a href="#fn2">2</a> 。类似的梯次配置在北京的忘不了、冰羽、网羽有约等很多俱乐部都有，有些俱乐部还会无偿提供新手培训<a href="#fn3">3</a>，也会为那些想在百尺竿头更进一步的会员提供付费教练和私教等有偿服务，比如北京的旭日星空羽毛球俱乐部就有成体系的教练团队，还有诸如升学加试、教练员培养等功能，为全国各大高校的体育专业和特招输送人才。</p>
+<h2 id="如何辨别黑心俱乐部"><a href="#如何辨别黑心俱乐部" class="headerlink" title="如何辨别黑心俱乐部"></a>如何辨别黑心俱乐部</h2><p>有一些号称自己经营了多少年的俱乐部，利用球友之间的矛盾获取私利，以为全天下都是傻子，主要特征：</p>
+<ol>
+<li>管理尺度不一 场地有四片，拢共三十人。高手不花钱，也不和你玩。</li>
+<li>群跟球友之间讨价还价 想跟高手打？在我这办卡。高手忙的话，人情欠得大。</li>
+<li>双簧 长得真好看，衣服差一点。凭啥受刺激，最后你买单。</li>
+<li>骗报班 想快速提高？体大有人教，一年八千块，交钱人不见。</li>
+</ol>
+<h2 id="新手、高手和俱乐部要有一个平衡。"><a href="#新手、高手和俱乐部要有一个平衡。" class="headerlink" title="新手、高手和俱乐部要有一个平衡。"></a>新手、高手和俱乐部要有一个平衡。</h2><ul>
+<li><strong>俱乐部</strong>承担人不够多费用不够成本的风险。在相对固定、对球友有信心、不谋取暴利的前提下，提供好球好场地。</li>
+<li><strong>新手</strong>要足够勤奋、进取、谦虚，心中杂念少，坚持不懈并有提高。</li>
+<li><strong>高手</strong>要对新手有信心并无私分享经验，督促新手进步。谁来为高手买单？以上三者其实共同承担促成高端俱乐部的风险、也成就了高端俱乐部的可能性。</li>
+</ul>
+<p>另一个矛盾是所谓的高手其实也需要和同水平甚至更高水平的高高手一起锤炼提高，至少也得保持状态。<br><strong>高水平俱乐部 ≠ 高端俱乐部。</strong><br>负点责的高端俱乐部用好球并提供固定名额。比如使用金胜利 1 号、每块场地 ≤ 6 人来迎合需求，培养了很多忠实会员，堪称现代羽毛球俱乐部楷模。<br>一旦进入了这样的俱乐部，肃然起敬是不够的，还要付出努力和汗水，因为所有会员都共同承担着彼此在羽球生涯中的命运，互为载体。<br>些许汗水和球技提高之后，是各自会心的微笑。 只要良性发展，有理由相信现在的一些整体水平不高的俱乐部，以后也必然会发展成为高水平的高端俱乐部。<br> 作为新手，推荐一些北京的高端俱乐部给大家，也欢迎那些负责的俱乐部管理者和群主把联系方式通过回复或消息发给我们。</p>
+<ol>
+<li>较原稿改动较大，在基本保留了原意的前提下，增加了打油诗、扩展了俱乐部配置、俱乐部推荐等其它内容。 <a href="#ffn1">↩︎</a></li>
+<li>说个误区，新手争先恐后的和高手打球并不能快速提高水平。在新手形成正确的动作定型前，过快的球速只能带来负面影响——动作变形、错误、疲于四处救球产生的运动伤害，轻则形成错误的动作习惯的天花板限制了水平提升，重则导致诸如肌肉韧带拉伤、关节不稳定和骨折等严重伤害。 <a href="#ffn2">↩︎</a></li>
+<li>只需正常交场地和球费参加活动就可以享受到热心陪练或教练的指导。 <a href="#ffn3">↩︎</a></li>
+</ol>
+
+          
         
       
     </div>
@@ -2060,6 +2092,459 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
           </div>
 
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">62</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">201</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2070,40 +2555,6 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
             </div>
           
 
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/xjvf" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://plus.google.com/+younzeryue" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://twitter.com/badmintontips" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.facebook.com/badmintonqna" target="_blank" title="FB Page"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://instagram.com/yumaoqiujishu" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://weibo.com/badmintontips/" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -2136,7 +2587,7 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">弗洛缺德</span>
 
@@ -2148,11 +2599,15 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
 
 
 
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
+  <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.3.0</div>
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
 
 
 
@@ -2200,8 +2655,6 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
 
 
 
-  
-
 
 
 
@@ -2231,11 +2684,6 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
@@ -2248,13 +2696,6 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
-
-
 
   
 
@@ -2290,353 +2731,9 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'DspDTyBGcFoTiKPAusMoAXJS-gzGzoHsz',
-        appKey: 'w9TdbhQeXRE2OHlz1qgs7lRy',
-        placeholder: '没病走两步？',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
 
 
 
@@ -2647,46 +2744,10 @@ BG-AB(AEROBITE)：独特的设计兼顾扣杀球与切削球
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
 
   
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "box";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
-    
-  </script>
-
   
 
   
