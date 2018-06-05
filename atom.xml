@@ -51,10 +51,10 @@
   
   <entry>
     <title>从未见过如此厚颜无耻之人</title>
-    <link href="http://yumaoqiujishu.club/uncategorized/0-2/"/>
-    <id>http://yumaoqiujishu.club/uncategorized/0-2/</id>
+    <link href="http://yumaoqiujishu.club/%E5%90%90%E6%A7%BD/test/0-2/"/>
+    <id>http://yumaoqiujishu.club/吐槽/test/0-2/</id>
     <published>2018-05-29T05:53:36.000Z</published>
-    <updated>2018-06-04T17:44:13.340Z</updated>
+    <updated>2018-06-05T03:31:24.059Z</updated>
     
     <summary type="html">
     
@@ -69,6 +69,10 @@
       
     
     </summary>
+    
+      <category term="吐槽" scheme="http://yumaoqiujishu.club/categories/%E5%90%90%E6%A7%BD/"/>
+    
+      <category term="test" scheme="http://yumaoqiujishu.club/categories/%E5%90%90%E6%A7%BD/test/"/>
     
     
       <category term="汤杯" scheme="http://yumaoqiujishu.club/tags/%E6%B1%A4%E6%9D%AF/"/>
